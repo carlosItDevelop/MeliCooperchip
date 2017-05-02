@@ -1,0 +1,482 @@
+﻿@using System.Web.UI.HtmlControls
+@using SDK
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <title>APIML | Tools - Management</title>
+    <meta name="keywords" content="HTML5 Template,  100% utilizada neste gerenciador de vendas do Mercadolivre" />
+    <meta name="description" content="Sistema gerenciador de vendas no Mercadolivre, utilizando suas API (s)" />
+    <meta name="author" content="shopcooperchip.com.br Carlos Alberto dos Santos PoetaRJ" />
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css" />
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <!---  BODY CODIGO PERSONALIZADO ANTES DO REDERBODY  /-->
+
+
+
+    <div class="body">
+        <!-- INICIO DO HEADER
+        ================================================================================================/ -->
+
+        <div class="navbar-fixed-top">
+
+            <header id="header">
+
+
+
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">
+                            <img alt="APIML | Tools" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="~/tpl/img/logo.png">
+                        </a>
+                    </div>
+                    <div class="search">
+                        <form id="searchForm" action="#" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control search" name="q" id="q" placeholder="Buscar..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="social-icons">
+                        <li class="facebook"><a href="https://www.facebook.com/ShopCooperchip/" target="_blank" title="Facebook">Facebook</a></li>
+                        <li class="twitter"><a href="http://www.twitter.com/ptcooperchip/" target="_blank" title="Twitter">Twitter</a></li>
+                        <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=221584014/" target="_blank" title="Linkedin">Linkedin</a></li>
+                    </ul>
+                    <nav>
+                        <ul class="nav nav-pills nav-top">
+
+                            <li class="signin" id="headerLogin">
+                                <i class="fa fa-user"></i> @Html.Partial("_LoginPartial")
+                            </li>
+
+                            <li class="phone" style="margin-left: 15px;">
+                                <span>  <i class="fa fa-phone"></i>(21) 3689-8891 / (21) 3689-8996</span>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                    <button class="navbar-toggle btn btn-responsive-nav btn-inverse" type="button" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <span class="icon-bar btn-warning"></span>
+                        <span class="icon-bar btn-warning"></span>
+                        <span class="icon-bar btn-warning"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse nav-main-collapse collapse">
+                    <div class="container">
+                        <nav class="nav-main mega-menu">
+                            <ul class="nav nav-pills nav-main" id="mainMenu">
+                                <li class="active">
+                                    <i class="icon icon-sign-blank"></i>
+                                    @Html.ActionLink("Home", "Index", "Home")
+                                </li>
+
+
+                                <li>
+                                    <a href="#">Nossos Planos</a>
+                                </li>
+
+
+
+                                <!-- Início do menu Mercado Livre /-->
+                                @*<li class="dropdown mega-menu-item mega-menu-fullwidth">*@
+                                <li class="dropdown mega-menu-item mega-menu-fullwidth">
+                                    <a class="dropdown-toggle" href="#">
+                                        Mercado livre
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="mega-menu-content">
+                                                <div class="row">
+
+                                                    <div class="col-md-3">
+                                                        <ul class="sub-menu">
+                                                            <li>
+
+                                                                <span class="mega-menu-sub-title">Items - Anúncios</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Gerenciamentos</a></li>
+                                                                    <li><a href="#">Postagem</a></li>
+                                                                </ul>
+
+
+                                                                <span class="mega-menu-sub-title">Orders - Pedidos</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Gerenciamento</a></li>
+                                                                    <li><a href="#">Mediação/Disputas</a></li>
+                                                                </ul>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+
+                                                    <div class="col-md-3">
+                                                        <ul class="sub-menu">
+                                                            <li>
+
+                                                                <span class="mega-menu-sub-title">Mercado Pago</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Pagamentos</a></li>
+                                                                    <li><a href="#">Recebimentos</a></li>
+                                                                </ul>
+
+
+                                                                <span class="mega-menu-sub-title">Notificações</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Gerenciamento</a></li>
+                                                                    <li><a href="#">Log</a></li>
+                                                                </ul>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <ul class="sub-menu">
+                                                            <li>
+                                                                <span class="mega-menu-sub-title">Qualificação</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Qualificações contraditórias</a></li>
+                                                                    <li><a href="#">Configurador de qualificações</a></li>
+                                                                </ul>
+                                                                <span class="mega-menu-sub-title">Pagamentos</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Sistema de notificações</a></li>
+                                                                    <li><a href="#">Relatórios de Pagamentos</a></li>
+
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <ul class="sub-menu">
+                                                            <li>
+                                                                <span class="mega-menu-sub-title">Perguntas e Blacklist</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Configurador de perguntas e respostas</a></li>
+                                                                    <li><a href="#">Bloqueios de usuários</a></li>
+                                                                    <li><a href="#">BlackList - Configurador</a></li>
+                                                                </ul>
+
+                                                                <span class="mega-menu-sub-title">Shippiments</span>
+                                                                <ul class="sub-menu">
+                                                                    <li><a href="#">Configurador de fretes</a></li>
+                                                                </ul>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Fim do menu Mercado Livre /-->
+
+
+
+
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="#">
+                                        Listagens
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li>@Html.ActionLink("Lista de Categorias", "Index", "MlCategoria")</li>
+                                        <li>@Html.ActionLink("Lista de Sub-Categorias", "SubCategoria", "MlCategoria")</li>
+                                        <li>@Html.ActionLink("Lista de Tipo de Publicidade", "Index", "TipoPublicidade")</li>
+                                        @*<li><a href="#">Produtos mas Buscados</a></li>
+                                        <li><a href="#">Destaques na Home Page do MercadoLivre</a></li>
+                                        <li><a href="#">Produtos mais Vendidos da Última Hora</a></li>*@
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" href="#">
+                                        Admin
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Cadastrar usuários</a></li>
+                                        <li><a href="#">Listar usuários</a></li>
+                                        <li>@Html.ActionLink("Autenticação / Autorização", "Index", "Autenticacao")</li>
+                                        <li>@Html.ActionLink("Sair do MarketPlace", "Logout", "Autenticacao")</li>
+                                    </ul>
+                                </li>
+
+
+                                <!-- Início do menu fale conosco /-->
+                                <li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount">
+                                    <a class="dropdown-toggle" href="#">
+                                        <i class="fa fa-phone"></i> Fale Conosco
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="mega-menu-content">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+
+                                                        <div class="signin-form">
+
+                                                            <span class="mega-menu-sub-title">Contato - Equipe APIML | Tools</span>
+                                                            <form action="#" method="POST">
+
+                                                                <div class="form" role="form">
+                                                                    <div class="row">
+
+                                                                        <div class="form-group mb-lg">
+                                                                            <label>Nome</label>
+                                                                            <div class="input-group input-group-icon">
+                                                                                <input name="txtNome" value="" type="text" class="form-control input-lg col-lg-6 col-md-6" placeholder="Digite seu nome..." />
+                                                                                <span class="input-group-addon">
+                                                                                    <span class="icon icon-lg">
+                                                                                        <i class="fa fa-user"></i>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group mb-lg">
+                                                                            <label>E-Mail</label>
+                                                                            <div class="input-group input-group-icon">
+                                                                                <input name="txtEmail" value="" type="email" class="form-control input-lg" placeholder="Digite seu e-mail válido..." />
+                                                                                <span class="input-group-addon">
+                                                                                    <span class="icon icon-lg">
+                                                                                        <i class="fa fa-mail-forward"></i>
+                                                                                    </span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <div class="col-md-12">
+
+                                                                                <textarea maxlength="5000" rows="10" class="form-control input-lg col-lg-6 col-md-6" name="comment" id="comment" placeholder="Deixe sua mensagem..." style="height: 138px;"></textarea>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <span class="remember-box checkbox">
+                                                                                <label for="newsletter">
+                                                                                    <input type="checkbox" id="newsletter" name="newsletter" />Assine nossa Newsletter
+                                                                                </label>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <input type="submit" value=".:: Enviar ::." class="btn btn-primary pull-right push-bottom" data-loading-text="Carregando..." />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Fim do menu FaleConosco /-->
+
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+
+
+            </header>
+
+        </div>
+
+<!--  FIM DO HEADER
+                ================================================================================================/ -->
+    <!-- FIM DO BODY CODIGO PERSONALIZADO ANTES DO RENDERBODY /-->
+
+    <div style="margin-top: 130px;">
+
+        @RenderBody()
+
+    </div>
+
+        <!-- INICIO DO BODY CODIGO PERSONALIZADO APOS DO RENDERBODY /-->
+            <!--  INICIO DO FOOTER
+                ================================================================================================/ -->
+
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-ribbon">
+                            <span>Entre em contato</span>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="newsletter">
+                                <h4>Newsletter</h4>
+                                <p>Fique por dentro de todas as novidades e promoções do nosso portal. Informe seu E-Mail e assine nossa Newsletter.</p>
+
+                                <div class="alert alert-success hidden" id="newsletterSuccess">
+                                    <strong>Parabéns!</strong> Você foi adicionado à nossa lista.
+                                </div>
+
+                                <div class="alert alert-danger hidden" id="newsletterError"></div>
+
+                                
+                                <div id="newsletterForm" class="form" role="form">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="Digite seu E-Mail..." name="newsletterEmail" id="newsletterEmail" type="text">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit">Enviar</button>
+                                        </span>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Últimos Tweets</h4>
+                            <div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "oklerthemes", "count": 2}'>
+                                <p>Aguarde, por favor...</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contact-details">
+                                <h4>Fale conosco</h4>
+                                <ul class="contact">
+                                    <li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
+                                    <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
+                                    <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Siga-nos</h4>
+                            <div class="social-icons">
+                                <ul class="social-icons">
+                                    <li class="facebook"><a href="https://www.facebook.com/ShopCooperchip/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
+                                    <li class="twitter"><a href="http://www.twitter.com/ptcooperchip/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
+                                    <li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=221584014/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <a href="#" class="logo">
+                                    <img alt="APIML | Tools - Magagement" class="img-responsive" src="~/tpl/img/logo-footer.png">
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <p>© Copyright @DateTime.Now.Year. Todos os direitos reservados.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li><a href="#">FAQ's</a></li>
+                                        <li><a href="#">Mapa do Site</a></li>
+                                        <li><a href="#">Contato</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--  FIM DO FOOTER
+                ================================================================================================/ -->
+
+        </div>
+
+
+
+        <div class="modal fade" id="divAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">
+                            <span class="icon-stack">
+                                <i class="icon-sign-blank icon-stack-base"></i>
+                                <i class="icon-info icon-light"></i>
+                            </span>
+                            Informação
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                         @if (Session["alert"] != null)
+                         {
+                             Session["alert"].ToString();
+                         } 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    @if (Session["alert"] != null)
+    {
+        <script>
+            $(function() {
+                $("#divAlert").modal();
+            });
+        </script>
+
+        Session["alert"] = null;
+    }
+      
+
+
+
+    <!-- FIM DO BODY CODIGO PERSONALIZADO APOS DO RENDERBODY /-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+</body>
+</html>

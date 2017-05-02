@@ -1,0 +1,49 @@
+﻿@model Repositorio.Entidades.Favoritos
+
+@{
+    ViewBag.Title = "Excluindo Favoritos";
+}
+
+<h2>Excluindo Favoritos...</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Favoritos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a Lista", "Index", null, new { @class="btn btn-default btn-sm" })
+        </div>
+    }
+</div>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<keys>
+  <activeapp></activeapp>
+  <shopcooperchip>
+    <appname></appname>
+    <appid></appid>
+    <secretkey></secretkey>
+    <urlretorno></urlretorno>
+    <urlnotifications></urlnotifications>
+  </shopcooperchip>
+  <teste>
+    <appname></appname>
+    <appid></appid>
+    <secretkey></secretkey>
+    <urlretorno></urlretorno>
+    <urlnotifications></urlnotifications>
+  </teste>
+  <eshopss>
+    <appname></appname>
+    <appid></appid>
+    <secretkey></secretkey>
+    <urlretorno></urlretorno>
+    <urlnotifications></urlnotifications>
+  </eshopss>
+</keys>

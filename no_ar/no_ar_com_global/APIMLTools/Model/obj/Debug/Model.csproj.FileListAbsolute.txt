@@ -1,0 +1,9 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\bin\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\bin\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\bin\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\bin\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\obj\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\obj\Debug\Model.pdb

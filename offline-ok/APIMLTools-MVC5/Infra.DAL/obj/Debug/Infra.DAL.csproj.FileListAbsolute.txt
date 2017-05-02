@@ -1,0 +1,15 @@
+D:\Desenv\works\APIMLTools-MVC\Infra.DAL\bin\Debug\Infra.DAL.dll
+D:\Desenv\works\APIMLTools-MVC\Infra.DAL\bin\Debug\Infra.DAL.pdb
+D:\Desenv\works\APIMLTools-MVC\Infra.DAL\obj\Debug\Infra.DAL.csprojResolveAssemblyReference.cache
+D:\Desenv\works\APIMLTools-MVC\Infra.DAL\obj\Debug\Infra.DAL.dll
+D:\Desenv\works\APIMLTools-MVC\Infra.DAL\obj\Debug\Infra.DAL.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC\Infra.DAL\obj\Debug\Infra.DAL.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\bin\Debug\Infra.DAL.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\bin\Debug\Infra.DAL.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Debug\Infra.DAL.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Debug\Infra.DAL.pdb
+C:\carlos\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\bin\Debug\Infra.DAL.dll
+C:\carlos\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\bin\Debug\Infra.DAL.pdb
+C:\carlos\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Debug\Infra.DAL.dll
+C:\carlos\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Debug\Infra.DAL.pdb
+C:\carlos\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Debug\Infra.DAL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Repositorio.Entidades.Agenda>
+
+@{
+    ViewBag.Title = "APIML | Tools";
+}
+
+<h2>APIML | Tools - Agenda</h2>
+
+<p>
+    @Html.ActionLink("Nova Agenda", "Create","Index", new { @class = "btn btn-success btn-sm" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Evento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Agente)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prioridade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th colspan="3" class="text-center">Ação</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Evento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Agente)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prioridade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td colspan="3" class="text-center">
+            @Html.ActionLink("Editar", "Edit", new { id=item.AgendaID }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Detalhes", "Details", new { id=item.AgendaID }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.AgendaID }, new { @class = "btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>

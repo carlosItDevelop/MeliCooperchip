@@ -1,0 +1,45 @@
+﻿@model Repositorio.Entidades.Favoritos
+
+@{
+    ViewBag.Title = "Favoritos - Detalhes";
+}
+
+<h2>Detalhes dos Favoritos...</h2>
+
+<div>
+    <h4>Favoritos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+
+    @Html.ActionLink("Editar", "Edit", new {id = Model.FavoritosId}, new {@class = "btn btn-default btn-sm"})
+    @Html.ActionLink("Voltar para a Lista", "Index", null, new {@class = "btn btn-default btn-sm"})
+</p>

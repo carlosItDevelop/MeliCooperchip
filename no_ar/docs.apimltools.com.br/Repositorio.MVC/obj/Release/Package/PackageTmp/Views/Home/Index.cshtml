@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "APIML | Tools - Home";
+}
+
+<div class="jumbotron">
+    <h1>Cooperchip | Note</h1>
+    <p class="lead">Esta Home Page é destinada a gerir todo o Office da Cooperchip Informática, com suas Agendas, Documentações, etc.</p>
+    <p><a href="/TaskList/Index" class="btn btn-primary btn-lg">Tarefas &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Documentação</h2>
+        <p>
+            Toda a agenda da Cooperchip e seu Pool de empresas associadas estará guardada aqui, com os mais modernos padrões de segurança.
+        </p>
+        <p>
+            <a class="btn btn-default" href="/Anotacao/Index">Leia mais &raquo;</a>
+            @*@Html.ActionLink("Leia Mais >>", "Index", "Agenda", "",  new {@class = "btn btn-default"})*@
+        </p>
+
+            
+
+
+    </div>
+    <div class="col-md-4">
+        <h2>Nossa Agenda</h2>
+        <p>Para uma empresa com tantos projetos e responsabilidades se faz necessária uma gestão de agenda muito bem estruturada e resguardada.</p>
+        <p><a class="btn btn-default" href="/Agenda/Index">Leia mais &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Nossos Contatos</h2>
+        <p>Uma das maiores riquezas de qualquer empresa é seu resource de contatos e parceiros. Aqui estão guardados os nossos.</p>
+        <p><a class="btn btn-default" href="/Contato/Index">Leia mais &raquo;</a></p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿@using Repositorio.MVC.Resources
+@{
+    ViewBag.Title = "Contato";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    Rua Frei Miguel, 386 - Loja B<br />
+    Realengo, Rio de Janeiro/RJ<br />
+    <abbr title="Phone">Telefone:</abbr>
+    (21) 3689-8891 / (21) 3689-8993
+</address>
+
+<address>
+    <strong>Supporte / Comercial/ SAC:</strong> <a href="contato.cooperchip@gmail.com">contato.cooperchip@gmail.com</a><br />
+    <strong>APIML | Tools Management:</strong> <a href="contato.eshopss@gmail.com">contato.eshopss@gmail.com</a>
+</address>
+
+<div class="panel-info">Endereço remoto: @ResourcesApp.GetResources("HOST") </div>

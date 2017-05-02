@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Repositorio.Entidades.HostProfile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo Profile", "Create", "Index", new { @class="btn btn-default btn-sm" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDeHost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </th>
+        <th class="text-center" colspan="3">Ação</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeHost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ativo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.HostProfileID }, new { @class="btn btn-default btn-sm" })
+            @Html.ActionLink("Detalhes", "Details", new { id=item.HostProfileID }, new { @class="btn btn-default btn-sm" })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.HostProfileID }, new { @class="btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>

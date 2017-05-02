@@ -1,0 +1,12 @@
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\Infra.Entidades.dll.config
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\Infra.Entidades.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\Infra.Entidades.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\EntityFramework.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\EntityFramework.SqlServer.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\EntityFramework.xml
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\bin\Release\EntityFramework.SqlServer.xml
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\obj\Release\Infra.Entidades.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\obj\Release\Infra.Entidades.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Entidades\obj\Release\Infra.Entidades.pdb

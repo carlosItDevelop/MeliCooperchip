@@ -1,0 +1,36 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Debug\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Debug\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Debug\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Debug\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\obj\Debug\SDK.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\obj\Debug\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\obj\Debug\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Debug\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Debug\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Debug\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Debug\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\obj\Debug\SDK.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\obj\Debug\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\obj\Debug\SDK.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\bin\Debug\SDK.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\bin\Debug\SDK.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\bin\Debug\Model.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\bin\Debug\Newtonsoft.Json.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\bin\Debug\RestSharp.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\bin\Debug\Model.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\obj\Debug\SDK.csprojResolveAssemblyReference.cache
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\obj\Debug\SDK.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\SDK\obj\Debug\SDK.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\bin\Debug\SDK.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\bin\Debug\SDK.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\bin\Debug\Model.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\bin\Debug\Newtonsoft.Json.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\bin\Debug\RestSharp.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\bin\Debug\Model.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\obj\Debug\SDK.csprojResolveAssemblyReference.cache
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\obj\Debug\SDK.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\SDK\obj\Debug\SDK.pdb

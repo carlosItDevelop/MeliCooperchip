@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Repositorio.Entidades.TaskList>
+
+@{
+    ViewBag.Title = "Lista de Tarefas";
+}
+
+<div class="page-header">
+    <h3>Lista e Filtro de Tarefas</h3>
+</div>
+
+<div class="panel">
+    @Html.ActionLink("Adiionar Tarefas", "Create", "Index", new { @class = "btn btn-default btn-sm text-right" })
+</div>
+
+<div class="panel-body">
+
+    @using(Html.BeginForm("Index", "TaskList", FormMethod.Get)) {
+
+        <div class="row">
+            <div class="form-inline form-group">
+                @Html.DropDownList("pList", null, "Todas as Prioridade", new { @class = "form-control col-lg-3" })
+                <div class="input-group col-lg-4">
+                    <input type="text" name="SearchString" class="form-control" placeholder="Texto da tarefa...&hellip;">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    }
+
+</div>
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DataCriacao)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Prioridade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Concruida)
+        </th>
+        <th colspan="3" class="text-center">Ação</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DataCriacao)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Prioridade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Concruida)
+        </td>
+        <td class="text-center" colspan="3">
+            @Html.ActionLink("Editar", "Edit", new { id=item.TaskListId }, new { @class="btn btn-default" })
+            @Html.ActionLink("Detalhes", "Details", new { id=item.TaskListId }, new { @class="btn btn-default" })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.TaskListId }, new { @class="btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

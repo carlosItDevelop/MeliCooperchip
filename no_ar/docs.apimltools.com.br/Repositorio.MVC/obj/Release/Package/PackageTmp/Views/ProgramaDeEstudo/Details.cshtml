@@ -1,0 +1,58 @@
+﻿@model Repositorio.Entidades.ProgramaDeEstudo
+
+@{
+    ViewBag.Title = "APIML | Tools";
+}
+
+<h2>APIML | Tools - Detalhes P. de Estudo</h2>
+
+<div>
+    @*<h4>ProgramaDeEstudo</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iniciado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iniciado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entendido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entendido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Praticado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Praticado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ProgramaDeEstudoID }) |
+    @Html.ActionLink("Voltar para a lista", "Index")
+</p>

@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Repositorio.Entidades.Expert>
+
+@{
+    ViewBag.Title = "Expert/Tecnologia";
+}
+
+
+<div class="page-header">
+    <h3>Lista e Filtro de Experts em Tecnologia</h3>
+</div>
+
+<div class="panel">
+    @Html.ActionLink("Adiionar Expert", "Create", "Index", new { @class = "btn btn-default btn-sm text-right" })
+</div>
+
+<div class="panel-body">
+
+    @using(Html.BeginForm("Index", "Expert", FormMethod.Get)) {
+
+        <div class="row">
+            <div class="form-inline form-group">
+                @Html.DropDownList("certificacao", null, "Mostrar Todos", new { @class = "form-control col-lg-3" })
+                <div class="input-group col-lg-4">
+                    <input type="text" name="SearchString" class="form-control" placeholder="Digite o nome...&hellip;">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    }
+
+</div>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Datacadastro)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Certificacao)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.HoraConsultoria)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.WebSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Twitter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Facebook)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Linkedin)
+        </th>*@
+        <th class="text-center" colspan="3">Ação</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Datacadastro)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Certificacao)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.HoraConsultoria)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.WebSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Twitter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Facebook)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Linkedin)
+        </td>*@
+        <td class="text-center" colspan="3">
+            @Html.ActionLink("Editar", "Edit", new { id=item.ExpertId }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ExpertId }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Excluir", "Delete", new { id=item.ExpertId }, new { @class = "btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>

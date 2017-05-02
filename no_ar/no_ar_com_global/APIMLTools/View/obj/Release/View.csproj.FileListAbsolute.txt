@@ -1,0 +1,40 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\View.dll.config
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\View.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\View.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\View\obj\Release\View.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\tools\View\obj\Release\View.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\obj\Release\View.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\View.dll.config
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\View.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\View.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\bin\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\obj\Release\View.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\obj\Release\View.resources.rscConfigApp.resources
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\obj\Release\View.csproj.GenerateResource.Cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\obj\Release\View.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\View\obj\Release\View.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\View.dll.config
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\View.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\View.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\Model.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\Newtonsoft.Json.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\RestSharp.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\SDK.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\Model.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\bin\SDK.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\obj\Release\View.csprojResolveAssemblyReference.cache
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\obj\Release\View.resources.rscConfigApp.resources
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\obj\Release\View.csproj.GenerateResource.Cache
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\obj\Release\View.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\View\obj\Release\View.pdb

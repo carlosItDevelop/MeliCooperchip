@@ -1,0 +1,27 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Release\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Release\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Release\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Release\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Release\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\bin\Release\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\obj\Release\SDK.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\obj\Release\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\SDK\obj\Release\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Release\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Release\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Release\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Release\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Release\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\bin\Release\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\obj\Release\SDK.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\obj\Release\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\SDK\obj\Release\SDK.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\bin\Release\SDK.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\bin\Release\SDK.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\bin\Release\Model.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\bin\Release\Newtonsoft.Json.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\bin\Release\RestSharp.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\bin\Release\Model.pdb
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\obj\Release\SDK.csprojResolveAssemblyReference.cache
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\obj\Release\SDK.dll
+C:\Users\caixa aqui\Desktop\MeLi-OK\Testando\APIMLTools\SDK\obj\Release\SDK.pdb

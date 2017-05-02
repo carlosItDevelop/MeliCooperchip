@@ -1,0 +1,4 @@
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\bin\Release\Infra.DAL.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\bin\Release\Infra.DAL.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Release\Infra.DAL.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.DAL\obj\Release\Infra.DAL.pdb

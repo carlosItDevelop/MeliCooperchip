@@ -1,0 +1,630 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frontend.master.cs" Inherits="SimpleMembershipLocalDatabase.frontend" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+		<!-- Basic -->
+		<meta charset="utf-8" />
+		<title>APIML | Tools - Management</title>		
+		<meta name="keywords" content="HTML5 Template,  100% utilizada neste gerenciador de vendas do Mercadolivre" />
+		<meta name="description" content="Sistema gerenciador de vendas no Mercadolivre, utilizando suas API (s)" />
+		<meta name="author" content="shopcooperchip.com.br Carlos Alberto dos Santos PoetaRJ" />
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Web Fonts  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css" />
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css" />
+		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="screen" />
+		<link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen" />
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen" />
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/theme.css" />
+		<link rel="stylesheet" href="css/theme-elements.css" />
+		<link rel="stylesheet" href="css/theme-blog.css" />
+		<link rel="stylesheet" href="css/theme-shop.css" />
+		<link rel="stylesheet" href="css/theme-animate.css" />
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css" media="screen" />
+		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css" media="screen" />
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="css/skins/default.css" />
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css" />
+
+		<!-- Head Libs -->
+		<script src="vendor/modernizr/modernizr.js"></script>
+
+		<!--[if IE]>
+			<link rel="stylesheet" href="css/ie.css" />
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+			<script src="vendor/respond/respond.js"></script>
+			<script src="vendor/excanvas/excanvas.js"></script>
+		<![endif]-->
+
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="formFrontEnd" runat="server">
+
+	   <div class="body">
+		<!--  INICIO DO HEADER 
+			================================================================================================/ -->
+
+			<header id="header">
+				<div class="container">
+					<div class="logo">
+						<a href="Default.aspx">
+							<img alt="APIML | Tools" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="/img/logo.png">
+						</a>
+					</div>
+					<div class="search">
+						<form id="searchForm" action="#" method="get">
+							<div class="input-group">
+								<input type="text" class="form-control search" name="q" id="q" placeholder="Buscar..." />
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+								</span>
+							</div>
+						</form>
+					</div>
+					<ul class="social-icons">
+						<li class="facebook"><a href="https://www.facebook.com/ShopCooperchip/" target="_blank" title="Facebook">Facebook</a></li>
+						<li class="twitter"><a href="http://www.twitter.com/ptcooperchip/" target="_blank" title="Twitter">Twitter</a></li>
+						<li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=221584014/" target="_blank" title="Linkedin">Linkedin</a></li>
+					</ul>
+					<nav>
+						<ul class="nav nav-pills nav-top">
+							
+							<asp:LoginView runat="server">
+								<AnonymousTemplate>
+									<li class="signin" id="headerLogin">									
+										<a href="/Login.aspx">
+											<i class="fa fa-user"></i> Login
+											<%--<i class="fa fa-angle-right"></i>--%>
+										</a>
+									</li>	
+								</AnonymousTemplate>
+								<LoggedInTemplate>
+									
+										<li class="signin" id="headerLogout" style="margin-top: 4px;">									                                                                                   
+											<i class="fa fa-user"></i></li>
+										<li style="margin-bottom: 10px;">
+											<asp:LinkButton Text="Logout" runat="server" ID="btnLogout" OnClick="btnLogout_Click" />
+										</li>
+<%--                                        <li>                                                                                        
+											<i class="fa fa-angle-right"></i>
+										</li>--%>
+									
+								</LoggedInTemplate>
+							</asp:LoginView>
+
+							<li class="signin" id="headerPerfil">									
+								<a href="/User/Default.aspx">
+									<i class="fa fa-indent"></i> Usuário
+									<%--<i class="fa fa-angle-right"></i>--%>
+								</a>
+							</li>
+
+							<li class="phone">
+								<span><i class="fa fa-phone"></i>(21) 3689-8891 / (21) 3689-8996</span>
+							</li>
+						</ul>
+					</nav>
+					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+				<div class="navbar-collapse nav-main-collapse collapse">
+					<div class="container">
+						<nav class="nav-main mega-menu">
+							<ul class="nav nav-pills nav-main" id="mainMenu">
+								<li class="active">
+									<a class="dropdown-toggle" href="Default.aspx">
+										Home
+										<%--<i class="fa fa-angle-down"></i>--%>
+									</a>
+								</li>
+								
+								
+								<li>
+									<a href="/nossosPlanos.aspx">Nossos Planos</a>									
+								</li>
+
+								
+								<!-- Início do menu serviços /-->                                
+								<li class="dropdown mega-menu-item mega-menu-fullwidth">
+									<a class="dropdown-toggle" href="#">
+										Serviços
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<div class="mega-menu-content">
+												<div class="row">
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Treinamento e Consultoria</span>
+																<ul class="sub-menu">
+																	<li><a href="/Default.aspx#nossafeatures">Para vendedores do Mercadolivre</a></li>
+																	<li><a href="/Default.aspx#divrecursos">Para desenvolvedores do Mercadolivre</a></li>
+																	<li><a href="/Default.aspx#nossafeatures">Para criação de sites</a></li>
+																</ul>
+																<span class="mega-menu-sub-title">Centro de Custos eShopSS</span>
+																<ul class="sub-menu">
+																	<li><a href="/centrodecusto.aspx">eShopSS</a></li>
+																	<li><a href="/centrodecusto.aspx">Hayamax Distribuição / Cooperchip</a></li>
+																	<li><a href="/centrodecusto.aspx">EvoluSom Distribuição e Atacadistas</a></li>
+																</ul>
+
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Desenvolvimento de sites</span>
+																<ul class="sub-menu">
+																	<li><a href="#">CSS3 + HTML5 + jQuery</a></li>
+																	<li><a href="#">Designer Responsivo</a></li>
+																	<li><a href="#">Templates Prontas</a></li>
+																	<li><a href="#">Templates Personalizadas</a></li>
+																	<li><a href="#">Padrão de Projetos</a></li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Criação de Lojas Virtuais</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Criação e Desenvolvimento</a></li>
+																	<li><a href="#">Hospedagem</a></li>
+																	<li><a href="#">Distribuição de Produtos</a></li>
+																</ul>
+																<span class="mega-menu-sub-title">Projeto Lucre Junto</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Como funciona</a></li>
+																	<li><a href="#">Como aderir</a></li>
+																	<li><a href="#">Quanto e como você lucra</a></li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Programa de Afiliados</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Consultoria</a></li>
+																	<li><a href="#">Criação de seu Programa de Afiliados</a></li>
+																	<li><a href="#">Adesão em nosso Programa de Afiliados</a></li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- Fim do menu serviços /-->
+																							
+								
+								<!-- Início do menu Mercado Livre /-->                                
+								<li class="dropdown mega-menu-item mega-menu-fullwidth">
+									<a class="dropdown-toggle" href="#">
+										Mercado livre
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<div class="mega-menu-content">
+												<div class="row">
+													
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Orders - Pedidos</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Pendentes</a></li>
+																	<li><a href="#">Ativos</a></li>
+																	<li><a href="#">Cancelados</a></li>
+																	<li><a href="#">Arquivados</a></li>
+																	<li><a href="#">Em Mediação</a></li>
+																</ul>
+																
+																<span class="mega-menu-sub-title">Mediações e Disputas</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Mediações e Disputas - Item 1</a></li>
+																	<li><a href="#">Mediações e Disputas - Item 2</a></li>
+																</ul>
+																
+															</li>
+														</ul>
+													</div>
+
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Items - Anúncios</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Tipos</a></li>
+																	<li><a href="#">Como Anunciar</a></li>
+																	<li><a href="#">Recadastrar</a></li>
+																	<li><a href="#">Pausar</a></li>
+																	<li><a href="#">Alterar Descrição</a></li>
+																	<li><a href="#">Aletrar preço e quantidade</a></li>
+																	<li><a href="#">Alterar imagens</a></li>
+																	<li><a href="#">Alterar Tudo</a></li>
+																	<li><a href="#">Excluir</a></li>
+																	<li><a href="#">Consultar</a></li>
+																</ul>                                                               
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Qualificação</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Qualificações contraditórias</a></li>
+																	<li><a href="#">Configurador de qualificações</a></li>
+																</ul>
+																<span class="mega-menu-sub-title">Pagamentos</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Sistema de notificações</a></li>
+																	<li><a href="#">Controle total recebimentos</a></li>
+																	<li><a href="#">Formas de pagamentos</a></li>
+																	<li><a href="#">Relatórios de Pagamentos</a></li>
+
+																</ul>
+															</li>
+														</ul>
+													</div>
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Perguntas e Blacklist</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Configurador de perguntas e respostas</a></li>
+																	<li><a href="#">Bloqueios de usuários</a></li>
+																	<li><a href="#">BlackList - Configurador</a></li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+													
+													<div class="col-md-3">
+														<ul class="sub-menu">
+															<li>
+																<span class="mega-menu-sub-title">Shippiments</span>
+																<ul class="sub-menu">
+																	<li><a href="#">Formas de remessas</a></li>
+																	<li><a href="#">Mercado Envios</a></li>
+																	<li><a href="#">Configurador de fretes</a></li>
+																</ul>
+															</li>
+														</ul>
+													</div>                                                    
+													 
+
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- Fim do menu Mercado Livre /-->                                
+								
+								
+								
+								
+
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#">
+										Produtos
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Programa de Afiliados</a></li>
+										<li><a href="#">Templates para E-Mails</a></li>
+										<li><a href="#">Templates para vendedores do Mercadolivre</a></li>
+										<li><a href="#">Lojas Virtuais</a></li>
+										<li><a href="#">APIs para Desenvolvedores</a></li>
+										<li><a href="#">Lucre Junto</a></li>
+										<li><a href="#">Disribuição eShopSS</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#">
+										Admin
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="http://tools.apimltools.com.br/">APIML | Tools</a></li>
+										<li><a href="/Admin/Cadastrar.aspx">Cadastrar usuários</a></li>
+										<li><a href="/Admin/Listagem.aspx">Listar usuários</a></li>
+									</ul>
+								</li>
+
+
+								<!-- Início do menu fale conosco /-->
+								<li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount">
+									<a class="dropdown-toggle" href="page-login.html">
+										<i class="fa fa-phone"></i> Fale Conosco
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<div class="mega-menu-content">
+												<div class="row">
+													<div class="col-md-12">
+
+														<div class="signin-form">
+
+															<span class="mega-menu-sub-title">Contato - Equipe APIML | Tools</span>
+
+															<form action="#" id="frmContato" method="post">
+																<div class="row">
+
+																	<div class="form-group mb-lg">
+																		<label>Nome</label>
+																		<div class="input-group input-group-icon">
+																			<input name="txtNome" value="" type="text" class="form-control input-lg" placeholder="Digite seu nome..." />
+																			<span class="input-group-addon">
+																				<span class="icon icon-lg">
+																					<i class="fa fa-user"></i>
+																				</span>
+																			</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group mb-lg">
+																		<label>E-Mail</label>
+																		<div class="input-group input-group-icon">
+																			<input name="txtEmail" value="" type="email" class="form-control input-lg" placeholder="Digite seu e-mail válido..." />
+																			<span class="input-group-addon">
+																				<span class="icon icon-lg">
+																					<i class="fa fa-mail-forward"></i>
+																				</span>
+																			</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group">
+																		<div class="col-md-12">																			
+																			<%--<label>Mensagem</label>--%>
+																			<textarea maxlength="5000" rows="10" class="form-control input-lg" name="comment" id="comment" placeholder="Deixe sua mensagem..." style="height: 138px;"></textarea>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-6">
+																		<span class="remember-box checkbox">
+																			<label for="newsletter">
+																				<input type="checkbox" id="newsletter" name="newsletter" />Assine nossa Newsletter
+																			</label>
+																		</span>
+																	</div>
+																	<div class="col-md-6">
+																		<input type="submit" value=".:: Enviar ::." class="btn btn-primary pull-right push-bottom" data-loading-text="Carregando..." />
+																	</div>
+																</div>
+															</form>														
+
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<!-- Fim do menu FaleConosco /-->
+
+
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+		<!--  FIM DO HEADER 
+			================================================================================================/ -->
+		   
+
+		<asp:ContentPlaceHolder ID="frontendContent" runat="server">
+		
+		</asp:ContentPlaceHolder>
+		   
+
+		<!--  INICIO DO FOOTER 
+			================================================================================================/ -->
+
+			<footer id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="footer-ribbon">
+							<span>Entre em contato</span>
+						</div>
+						<div class="col-md-3">
+							<div class="newsletter">
+								<h4>Newsletter</h4>
+								<p>Fique por dentro de todas as novidades e promoções do nosso portal. Informe seu E-Mail e assine nossa Newsletter.</p>
+			
+								<div class="alert alert-success hidden" id="newsletterSuccess">
+									<strong>Parabéns!</strong> Você foi adicionado à nossa lista.
+								</div>
+			
+								<div class="alert alert-danger hidden" id="newsletterError"></div>
+			
+								<form id="newsletterForm" action="#" method="post">
+									<div class="input-group">
+										<input class="form-control" placeholder="Digite seu E-Mail..." name="newsletterEmail" id="newsletterEmail" type="text">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="submit">Enviar</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h4>Últimos Tweets</h4>
+							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "oklerthemes", "count": 2}'>
+								<p>Aguarde, por favor...</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="contact-details">
+								<h4>Fale conosco</h4>
+								<ul class="contact">
+									<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
+									<li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
+									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<h4>Siga-nos</h4>
+							<div class="social-icons">
+								<ul class="social-icons">
+									<li class="facebook"><a href="https://www.facebook.com/ShopCooperchip/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
+									<li class="twitter"><a href="http://www.twitter.com/ptcooperchip/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
+									<li class="linkedin"><a href="https://www.linkedin.com/profile/view?id=221584014/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-1">
+								<a href="index-2.html" class="logo">
+									<img alt="APIML | Tools - Magagement" class="img-responsive" src="img/logo-footer.png">
+								</a>
+							</div>
+							<div class="col-md-7">
+								<p>© Copyright <%=DateTime.Now.Year.ToString() %>>. Todos os direitos reservados.</p>
+							</div>
+							<div class="col-md-4">
+								<nav id="sub-menu">
+									<ul>
+										<li><a href="#">FAQ's</a></li>
+										<li><a href="#">Mapa do Site</a></li>
+										<li><a href="#">Contato</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>  
+		<!--  FIM DO FOOTER 
+			================================================================================================/ -->
+	
+	</div>
+
+
+		<%--Esta é uma janela para exibir alertas que usa a função modal() do Bootstrap--%>
+		<div class="modal fade" id="divAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">
+							<span class="icon-stack">
+								<i class="icon-sign-blank icon-stack-base"></i>
+								<i class="icon-info icon-light"></i>
+							</span>
+							Informação
+						</h4>
+					</div>
+					<div class="modal-body">
+						<% if (Session["alert"] != null)
+						   { %>
+						<%: Session["alert"].ToString() %>
+						<% } %>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script src="Scripts/jquery-1.9.1.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
+	<script src="Scripts/scripts.js"></script>
+
+	<% if (Session["alert"] != null)
+	   { %>
+	<script>
+		$(function () {
+			$("#divAlert").modal();
+		});
+	</script>
+	<% Session["alert"] = null; %>
+	<% } %>
+
+
+
+
+		<!-- Vendor -->
+		<script src="vendor/jquery/jquery.js"></script>
+		<script src="vendor/jquery.appear/jquery.appear.js"></script>
+		<script src="vendor/jquery.easing/jquery.easing.js"></script>
+		<script src="vendor/jquery-cookie/jquery-cookie.js"></script>
+		<script src="master/style-switcher/style.switcher.js"></script>
+		<script src="vendor/bootstrap/bootstrap.js"></script>
+		<script src="vendor/common/common.js"></script>
+		<script src="vendor/jquery.validation/jquery.validation.js"></script>
+		<script src="vendor/jquery.stellar/jquery.stellar.js"></script>
+		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
+		<script src="vendor/isotope/jquery.isotope.js"></script>
+		<script src="vendor/owlcarousel/owl.carousel.js"></script>
+		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="vendor/vide/vide.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="js/theme.js"></script>
+		
+		<!-- Specific Page Vendor and Views -->
+		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
+		<script src="js/views/view.home.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="js/theme.init.js"></script>
+	
+
+	</body>
+
+</html>

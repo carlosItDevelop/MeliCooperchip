@@ -1,0 +1,13 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\bin\Release\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\bin\Release\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Release\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Release\Model.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\bin\Release\Model.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\bin\Release\Model.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\obj\Release\Model.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\obj\Release\Model.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\bin\Release\Model.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\bin\Release\Model.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\obj\Release\Model.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\obj\Release\Model.pdb

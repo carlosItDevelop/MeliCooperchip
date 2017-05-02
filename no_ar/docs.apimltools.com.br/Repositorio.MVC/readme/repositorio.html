@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://msdn.microsoft.com/pt-br/library/dn630213.aspx -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="WT.seg_1" content="pt-br"><link rel="canonical" href="./repositorio_files/repositorio.html">
+        <title>Repositório de Dados no Entity Framework 6</title>
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/pt-br/library/dn630213(d=default,l=pt-br,v=msdn.10).aspx">
+
+<meta name="NormalizedUrl" content="https://msdn.microsoft.com/pt-br/library/dn630213(d=default,l=pt-br,v=msdn.10).aspx">
+
+<meta name="ms.normalizedurl" content="https://msdn.microsoft.com/pt-br/library/dn630213(d=default,l=pt-br,v=msdn.10).aspx">
+
+<meta name="VotingContextUrl" content="https://msdn.microsoft.com/pt-br/library/dn630213(d=default,l=pt-br,v=msdn.10).aspx">
+
+<meta name="MN" content="FB361394-11:18:20 AM">
+
+<meta name="Search.ShortId" content="dn630213">
+
+<meta name="ms.shortidmsdn" content="dn630213">
+
+<meta name="Ms.Locale" content="pt-br">
+
+<meta name="ms.prodver" content="MSDN.10">
+
+<meta name="ms.contentlang" content="PT">
+
+<meta name="ms.lang" content="PT">
+
+<meta name="ms.loc" content="BR">
+
+<meta name="ms.sitever" content="2015.06.02.3">
+
+<meta name="ms.assetid" content="f684b5b6-2827-4239-b411-764e41a9055f">
+
+<meta name="ms.auth" content="0">
+
+
+
+
+
+
+
+
+        
+    <link rel="stylesheet" type="text/css" href="./repositorio_files/Combined.css"><script type="text/javascript" src="./repositorio_files/ai.js" async=""></script><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "https://i-msdn.sec.s-msft.com", 
+	"js": "https://i2-msdn.sec.s-msft.com", 
+	"css": "https://i-msdn.sec.s-msft.com", 
+	"xap": "https://msdn.microsoft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected" src="./repositorio_files/jquery-1.8.2.min.js"></script><script class="mtps-injected">try {
+//
+  var literalNormalizedUrl = '/pt-br/library/dn630213(l=pt-br,v=msdn.10).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+
+
+
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    var wtidJs = document.createElement("script");
+    wtidJs.src = "//" + gDomain + "/" + gDcsId + "/wtid.js";
+    document.getElementsByTagName("head")[0].appendChild(wtidJs);
+  }
+
+
+
+  var detectedLocale = 'pt-br';
+  var wtsp = 'msdnlib_techart';
+  var gTrackEvents = '0';
+/**/
+} finally { MTPS._injectNextScript_2 && MTPS._injectNextScript_2(); }</script><script class="mtps-injected">try {
+/**/
+  var omni_guid = "2b3e9135-9d41-47c3-bfba-80764f81233e";
+/**/
+} finally { MTPS._injectNextScript_3 && MTPS._injectNextScript_3(); }</script><script class="mtps-injected">try {
+//
+
+            window.appInsightsId = '60854590-027a-4ae4-98be-2741a40f355f';
+            //
+} finally { MTPS._injectNextScript_4 && MTPS._injectNextScript_4(); }</script><script class="mtps-injected" src="./repositorio_files/Combined.js"></script><script class="mtps-injected" src="./repositorio_files/SearchBox.jss"></script><script class="mtps-injected" src="./repositorio_files/Combined(1).js"></script><script src="./repositorio_files/broker.js"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_8 && MTPS._injectNextScript_8(); }</script><link href="./repositorio_files/PrintView.css" rel="stylesheet" type="text/css" media="print"><script type="text/javascript" src="./repositorio_files/ms.js"></script></head>
+    <body class="library Chrome" data-pinterest-extension-installed="cr1.37">
+        <div id="page">
+            
+
+            
+            
+            
+    
+
+    
+    <link type="text/css" rel="stylesheet">
+    
+    <input type="hidden" id="isHeaderBleeding" value="true">
+    <div id="ux-header" dir="ltr" class="ltr msdn" data-device-type="desktop">
+        
+
+      <header>
+        <span id="singleCol"></span>
+        <span id="doubleCol"></span>
+        <span id="isMobile"></span>
+        <div>
+          <div class="row topRow">
+            <div class="top">
+              <div class="left">
+                <a class="msdnLogoImg" href="https://msdn.microsoft.com/pt-br">
+                  <div id="msft-logo" class="msft-logo"></div>
+                </a>
+                <div class="GrayPipe"></div>
+                  <a class="DevCenterFullNameNonMegaBlade" href="https://msdn.microsoft.com/pt-br">Developer Network</a>
+                <a class="DevCenterFullName" href="https://msdn.microsoft.com/pt-br">Developer Network</a>
+                <a class="DevCenterShortName" href="https://msdn.microsoft.com/pt-br">Developer</a>
+              </div>
+              <div class="right">
+                <div id="signIn">
+
+  <img class="profileImage" src="./repositorio_files/profile.jpg">
+
+
+
+<a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1433528300&rver=6.0.5276.0&wp=MCMBI&wlcxt=MSDN%24MSDN%24MSDN&wreply=https%3a%2f%2fmsdn.microsoft.com%2fpt-br%2flibrary%2fdn630213.aspx&lc=1046&id=254354&mkt=pt-BR" title="Entrar">Entrar</a></div>
+
+
+
+
+                <div class="auxNav">
+                  <div>
+                    <div data-fragmentname="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://msdn.microsoft.com/subscriptions/manage/hh442900" id="Subscriptions_2153_1" xmlns="http://www.w3.org/1999/xhtml">
+    <span style="line-height:18px;" xmlns="">Assinaturas do MSDN</span>
+  </a>
+</div>
+                    <div data-fragmentname="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://go.microsoft.com/fwlink/?LinkId=309297&clcid=0x416&slcid=0x416&campaign=o~msft~msdn~gettools-header~dn308572" id="GetTools_2153_3" xmlns="http://www.w3.org/1999/xhtml">
+    <span style="line-height:18px;" xmlns="">Obter ferramentas</span>
+  </a>
+</div>
+                  </div>
+                  <div>
+                    <div data-fragmentname="SocialLinks" id="Fragment_SocialLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="http://www.facebook.com/microsoftdeveloper" target="_blank" id="SocialLinks_2152_4" class="facebook" xmlns="http://www.w3.org/1999/xhtml">http://www.facebook.com/microsoftdeveloper</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/msdev" target="_blank" id="SocialLinks_2152_5" class="twitter" xmlns="http://www.w3.org/1999/xhtml">https://twitter.com/msdev</a>
+      </li>
+      <li>
+        <a href="http://plus.google.com/111221966647232053570/" target="_blank" id="SocialLinks_2152_6" class="googlePlus" xmlns="http://www.w3.org/1999/xhtml">http://plus.google.com/111221966647232053570/</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="row middleRow">
+            <div class="expandTop" style="display: none;">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+          </div>
+        </div>
+        <div id="buttomRowWrapper" style="background-color: #232323;">
+          <div class="row buttomRow" style="background-color: #232323">
+            <div class="bottom">
+              <div class="left">
+                <a id="grip" class="menu-icon" href="javascript:void(0)"></a>
+                
+                <div id="drawer">
+                  <div class="toc">
+                    
+        <nav>
+            <ul class="navL1">
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="Tecnologias">Tecnologias</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/cloud-app-development-msdn" title="Nuvem">Nuvem</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/mobile-app-development-msdn" title="Celular">Celular</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/web-app-development-msdn" title="Web">Web</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/business-and-productivity-app-development-msdn" title="Negócios">Negócios</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/big-data-development-msdn" title="Big Data">Big Data</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/pt-br/games-development-msdn" title="Jogos">Jogos</a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="Downloads">Downloads</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+                                            <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" title="Visual Studio">Visual Studio</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/subscriptions/" title="Acesso à assinatura MSDN">Acesso à assinatura MSDN</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/microsoft-sdks-msdn" title="SDKs">SDKs</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="Software de avaliação">Software de avaliação</a>
+
+                                                <ul class="navL3" style="display: none;">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/evalcenter" title="Downloads gratuitos">Downloads gratuitos</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/officeevaluationresources" title="Recursos do Office">Recursos do Office</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sharepoint2013resources" title="Recursos do Share Point Server 2013">Recursos do Share Point Server 2013</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/windowsserver2012r2resources" title="Recursos do Windows Server 2012">Recursos do Windows Server 2012</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/sqlserver2014expressresources" title="Recursos do SQL Server 2014 Express">Recursos do SQL Server 2014 Express</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="Programas">Programas</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+                                            <a href="https://rewards.msdn.microsoft.com/" title="Premiações">Premiações</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://www.microsoft.com/bizspark" title="Startups">Startups</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="Estudantes">Estudantes</a>
+
+                                                <ul class="navL3" style="display: none;">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/student-developer-program" title="Nova página de visão geral do Student">Nova página de visão geral do Student</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="http://blogs.msdn.com/b/microsoft_student_developer_blog" title="Blog">Blog</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/microsoftstudentpartners" title="Microsoft Student Partners">Microsoft Student Partners</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="Architects">Architects</a>
+
+                                                <ul class="navL3" style="display: none;">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/architects-overview-msdn" title="Visão geral">Visão geral</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/architects-blueprints-msdn" title="Planos gráficos">Planos gráficos</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/architects-case-studies-msdn" title="Estudos de casos">Estudos de casos</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="http://blogs.msdn.com/b/msarchitecture/" title="Blog">Blog</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="http://social.msdn.microsoft.com/forums/en-us/home?brandignore=true&sort=relevancedesc&searchterm=architecture+or+architect" title="Forums">Forums</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://events.msdn.microsoft.com/pt-br" title="Eventos">Eventos</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive toggle">
+                                            <a href="javascript:void(0)" title="Assinaturas do MSDN">Assinaturas do MSDN</a>
+
+                                                <ul class="navL3" style="display: none;">
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/msdn-subscriptions-overview" title="Overview">Overview</a>
+                                                        </li>
+                                                        <li class="inactive">
+                                                            <a href="https://msdn.microsoft.com/benefits-overview" title="Benefits">Benefits</a>
+                                                        </li>
+                                                </ul>
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive toggle">
+                            <a href="javascript:void(0)" title="Comunidade">Comunidade</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive">
+                                            <a href="https://social.msdn.microsoft.com/forums/" title="Fóruns">Fóruns</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://blogs.msdn.com/b/developer-tools/" title="Blogs">Blogs</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://tech-advisors.msdn.microsoft.com/en-us" title="Especialistas técnicos">Especialistas técnicos</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="http://channel9.msdn.com/" title="Channel 9 ">Channel 9 </a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive current toggle">
+                            <a href="javascript:void(0)" title="Documentação">Documentação</a>
+                                <ul class="navL2" style="display: none;">
+                                        <li class="inactive current">
+                                            <a href="https://msdn.microsoft.com/library" title="APIs and reference">APIs and reference</a>
+
+                                                   
+                                        </li>
+                                        <li class="inactive">
+                                            <a href="https://msdn.microsoft.com/developer-centers-msdn" title="Centros do desenvolvedor">Centros do desenvolvedor</a>
+
+                                                   
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="inactive">
+                            <a href="https://code.msdn.microsoft.com/" title="Exemplos">Exemplos</a>
+                        </li>
+            </ul>
+        </nav>
+
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div data-fragmentname="SearchBox" id="Fragment_SearchBox" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="SearchBox">
+    <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" class="SearchBoxOnFocus">
+      <button id="FakeHeaderSearchButton" value="Search" type="submit" class="header-search-button">
+        <div id="search-finder" class="search-finder"></div>
+      </button>
+      <button id="HeaderSearchButton" style="display:none" title="Pesquisar no MSDN"></button>
+      <div id="searchSplitter"></div>
+      <div id="searchCloseIcon" class="search-clear-x"></div>
+      <div id="searchTextContainer" style="width: 0px; display: none;">
+        <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" autocomplete="off">
+      <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; color: rgb(255, 255, 255); font-family: Arial; font-size: 16px; background-color: rgb(255, 255, 255);"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></div>
+    </form>
+    
+    
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </header>
+
+    <div id="overlayMaskHeader"></div></div>
+    
+    
+
+        
+    <div class="printExportMenus ltr">
+        <a id="isd_printABook" href="https://msdn.microsoft.com/pt-br/library/export/help/?returnUrl=%2fpt-br%2flibrary%2fdn630213.aspx" style="display: inline;">
+            Exportar (<span class="count">0</span>)
+        </a>
+        <a id="isd_print" href="https://msdn.microsoft.com/pt-br/library/dn630213(d=printer).aspx" rel="nofollow">
+            Imprimir 
+        </a>
+    </div>
+    
+
+        <div class="printExportMenus ltr">
+        <a id="expandCollapseAll" accesskey="e" href="javascript:void(0)" title="Expand/Collapse all sections by pressing Ctrl + Shift + e" style="display: none;">Expandir Tudo</a>
+    </div>
+
+    
+
+
+            <div id="body">
+                
+
+
+
+
+
+
+
+
+    <div id="leftNav" style="width: 405px; max-width: 480px; min-height: 24240px; height: 1083px;">
+
+
+
+
+<div id="tocnav" class="" style="width: 405px; position: fixed; top: -474px;">
+
+
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://msdn.microsoft.com/pt-br/library/dn630213.aspx#"></a><a data-tochassubtree="true" href="https://msdn.microsoft.com/pt-br/library/ms123401.aspx" id="ms310241_MSDN.10_pt-br" mtpsaliasid="" mtpsassetid="5DDC0A78-6B2C-43E3-9C56-55F45C0DFFA5_MSDN.10_pt-br" mtpsshortid="ms123401_MSDN.10_pt-br" title="Biblioteca MSDN">Biblioteca MSDN</a>            </div>
+            <div class="toclevel0 " data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="https://msdn.microsoft.com/pt-br/library/dn630213.aspx#"></a><a data-tochassubtree="true" href="https://msdn.microsoft.com/pt-br/library/jj149119.aspx" id="cc514048_MSDN.10_pt-br" mtpsaliasid="" mtpsassetid="69273390-7c16-4660-a6cc-a1f363408b30_MSDN.10_pt-br" mtpsshortid="jj149119_MSDN.10_pt-br" title="Artigos Técnicos">Artigos Técnicos</a>            </div>
+            <div class="toclevel1 " data-toclevel="1" data-childrenloaded="true" style="padding-left: 17px;">
+<a class="toc_expanded" href="https://msdn.microsoft.com/pt-br/library/dn630213.aspx#"></a><a data-tochassubtree="true" href="https://msdn.microsoft.com/pt-br/library/hh972591.aspx" id="hh972591_MSDN.10_pt-br" mtpsaliasid="" mtpsassetid="MSDN|TA_Tecnologia .NET_TOC|$\ta_tecnologia .net_toc.hxt@0,0_MSDN.10_pt-br" mtpsshortid="hh972591_MSDN.10_pt-br" title="Tecnologia .Net">Tecnologia .Net</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/mt147283.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ASP.NET 5 e o .NET Execution Environment (DNX)">ASP.NET 5 e o .NET Execution Environment (DNX)</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/mt147289.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Como Executar uma Aplicação ASP.NET 5 no Pend-Drive via Linha de Comando?">Como Executar uma Aplicação ASP.NET 5 no Pend-Drive via Linha de Comando?</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn877997.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Code First Entity Framework com Banco Existente no ASP.NET MVC 5">Code First Entity Framework com Banco Existente no ASP.NET MVC 5</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn877998.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Como Usar Areas no ASP.NET MVC 5?">Como Usar Areas no ASP.NET MVC 5?</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn878001.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Arquivos de Configurações do ASP.NET 5?">Arquivos de Configurações do ASP.NET 5?</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn802810.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Como usar ADO.NET no ASP.NET MVC?">Como usar ADO.NET no ASP.NET MVC?</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn776298.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EntityFramework – Apoveitando seu Banco de Dados com PowerTools">EntityFramework – Apoveitando seu Banco de Dados com PowerTools</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn776299.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EntityFramework - Lendo seu banco de dados com o Visual Studio 2013 Update 2">EntityFramework - Lendo seu banco de dados com o Visual Studio 2013 Update 2</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn776300.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework - Criando Índices no Entity Framework CodeFirst">Entity Framework - Criando Índices no Entity Framework CodeFirst</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn630210.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework–CodeBase Configuration (Interception)">Entity Framework–CodeBase Configuration (Interception)</a>            </div>
+            <div class="toclevel2 current " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="./repositorio_files/repositorio.html" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Repositório de Dados no Entity Framework 6">Repositório de Dados no Entity Framework 6</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn592109.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ASP.Net - Usando parameter ao invés de aspas">ASP.Net - Usando parameter ao invés de aspas</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn423988.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ASP.NET - Configurar Rotas no ASP.NET">ASP.NET - Configurar Rotas no ASP.NET</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn168847.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ASP.NET - Uso de Bundle e Minification no ASP.NET MVC 4 e ASP.NET Web Forms 4.5">ASP.NET - Uso de Bundle e Minification no ASP.NET MVC 4 e ASP.NET Web Forms 4.5</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/dn195919.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ASP.NET - Templates de CRUD no ASP.NET Web Forms 4.5">ASP.NET - Templates de CRUD no ASP.NET Web Forms 4.5</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj900151.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework 5 - Dados Geográficos no Entity Framework 5 e SQL Server 2012">Entity Framework 5 - Dados Geográficos no Entity Framework 5 e SQL Server 2012</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj591330.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework - Code First–Migrations">Entity Framework - Code First–Migrations</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj218324.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Visual #C - Uso de parâmetros Opcionais no Visual C# 4">Visual #C - Uso de parâmetros Opcionais no Visual C# 4</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/gg547375.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title=".NET Framework 4 - Serializando Dados">.NET Framework 4 - Serializando Dados</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/gg537280.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title=".NET Framework 4 - Usando Arquivos de Configuração">.NET Framework 4 - Usando Arquivos de Configuração</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj856238.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework - Entity Framework Code First – Migrations">Entity Framework - Entity Framework Code First – Migrations</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj856239.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework - Engenharia Reversa no Entity Framework 5">Entity Framework - Engenharia Reversa no Entity Framework 5</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/hh972463.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework - Code First">Entity Framework - Code First</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj128157.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework – Modulo 1 / Fundamentos do Entity Framework 4">Entity Framework – Modulo 1 / Fundamentos do Entity Framework 4</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj128158.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework – Modulo 2 / Banco de Dados no Entity Framework 4">Entity Framework – Modulo 2 / Banco de Dados no Entity Framework 4</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj128159.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework – Modulo 3 / Executando consultas com LINQ e expressões Lambda">Entity Framework – Modulo 3 / Executando consultas com LINQ e expressões Lambda</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj128160.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Entity Framework – Modulo 4 / Manutenção de Dados no Entity Framework 4">Entity Framework – Modulo 4 / Manutenção de Dados no Entity Framework 4</a>            </div>
+            <div class="toclevel2 " data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="https://msdn.microsoft.com/pt-br/library/jj129537.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ASP.NET - Importância e o uso do Data Annotation">ASP.NET - Importância e o uso do Data Annotation</a>            </div>
+</div>
+        
+
+        
+
+        
+        
+        <div id="toc-resizable-ew" class="toc-resizable-ew"></div>
+        
+
+<a id="NavigationResize" href="javascript:void(0)" style="left: 405px; display: inline-block;">
+    <img class="cl_nav_resize_open" src="./repositorio_files/ImageSprite.png" title="Expandir" alt="Expandir">
+    <img class="cl_nav_resize_close" src="./repositorio_files/ImageSprite.png" title="Minimizar" alt="Minimizar" style="display: none;">
+</a>
+
+
+
+    </div>
+<div id="content" class="content" style="margin-left: 405px; width: auto;">
+
+
+
+
+
+
+
+        
+
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">
+            Repositório de Dados no Entity Framework 6
+          </h1>
+  
+  <div id="mainSection">
+      <div id="mainBody">
+        
+        <p></p>
+        <h2 class="subheading">Renato Haddad</h2>
+        <p>
+          <img id="060DE5057573180CEC6D227C6D3E2207" alt="Dn630213.060DE5057573180CEC6D227C6D3E2207(pt-br,MSDN.10).png" src="./repositorio_files/IC579899.png" title="Dn630213.060DE5057573180CEC6D227C6D3E2207(pt-br,MSDN.10).png" xmlns="">
+        </p>
+        <h2 class="subheading">Março, 2014</h2>
+        <p>O objetivo deste artigo é ilustrar como criar um Repositório de Dados no Entity Framework 6 com classes em Visual C# 5. O uso de repositório é antigo, diversas tecnologias usam, e pesquisando na internet encontrei diversos exemplos pobres em funcionalidades, muitas vezes alguns que torna o trabalho do desenvolvedor muito braçal, e ao longo do projeto, compromete a produtividade. Sendo assim, ao longo de anos do EF e algumas conversas com o Rowan Miller, Program Manager do EF na MS/EUA, resolvi escrever este artigo para ajuda-los a montar uma arquitetura genérica de repositório de dados.</p>
+        <p>Em alguns momentos críticos de um projeto, uma decisão de qual caminho seguir é fundamental. Isto vale para qualquer tipo de projeto, e em TI vale desde uma simples planilha no Excel até projetos complexos de E-Commerce. E, quando adicionamos o uso de banco de dados, projeto em equipes (centralizadas ou não), começa a ficar crítico. Isto sem falar em outras variáveis como extensibilidade, camadas de dados, persistência, outras plataformas, etc. Enfim, o projeto que irei criar será uma solução com diversos projetos separados, a fim de focar em cada camada.</p>
+        <p> Os pré-requisitos para este artigo são conhecimento intermediário de C# e o Visual Studio .NET 2013.</p>
+        <h2 class="subheading">Solução Repositório</h2>
+        <p>A primeira coisa a fazer é criar uma solução vazia. Para isto, abra o Visual Studio 2013, selecione a opção File / New / Project ou CTRL + SHIFT + N ou na janela inicial, clique em New Project. Conforme a figura 1, selecione Other Project Types / Visual Studio Solutions. Em Name digite Repositorio.MSDN e no Location você pode gravar onde desejar.</p>
+        <p>
+          <img id="48CB3ED31526ED0FB7D92104A638EE17" alt="Dn630213.48CB3ED31526ED0FB7D92104A638EE17(pt-br,MSDN.10).png" src="./repositorio_files/IC715936.png" title="Dn630213.48CB3ED31526ED0FB7D92104A638EE17(pt-br,MSDN.10).png" xmlns="">
+        </p>
+        <p>Figura 1 – Nova solução</p>
+        <p>Clique no botão OK e note no Solution Explorer que existe apenas a solução vazia. Quando falamos de repositório de dados, a primeira coisa que pensamos são as entidades, ou seja, a estrutura das classes, o que normalmente serão espelhadas em tabelas no banco de dados. Aqui, você pode abstrair diretamente do banco de dados utilizando o recurso do Model First do Entity Framework ou usar o fantástico recurso de Code First. Mas, se neste projeto pretendo ter somente as entidades, não é certo pensar que a string de conexão com o banco de dados estará neste projeto. E, é verdade, neste projeto de DLL (Class Library) não teremos nada referente ao local onde as entidades estão armazenadas. Para isto, criarei um projeto de DAL (Data Access Layer), o qual usará as entidades que criaremos aqui. </p>
+        <p>Sendo assim, no Solution Explorer, clique com o botão direito e selecione Add / New Project. Conforme a figura 2, selecione a linguagem Visual C# e o template Class Library. Em Name digite Repositorio.Entidades e o Location deixe como está.</p>
+        <p>
+          <img id="486625B3420E2F9C085AB621F3AAF76D" alt="Dn630213.486625B3420E2F9C085AB621F3AAF76D(pt-br,MSDN.10).png" src="./repositorio_files/IC715937.png" title="Dn630213.486625B3420E2F9C085AB621F3AAF76D(pt-br,MSDN.10).png" xmlns="">
+        </p>
+        <p>Figura 2 – Projeto de entidades</p>
+        <p>Clique no botão OK e deixe que o Visual Studio crie o projeto. Como é um projeto de Class Library, o VS já cria uma classe chamada Class1, portanto, exclua-a. Em seguida, crie uma classe (Add/Class) chamada Cliente, conforme a estrutura a seguir. Basicamente é uma classe pública contendo as propriedades do objeto Cliente. Nem preciso dizer que você pode adicionar ou remover propriedades conforme a necessidade.</p>
+        
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_da4f151f-f410-44b0-90cc-02d4323ace5b');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_da4f151f-f410-44b0-90cc-02d4323ace5b" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">namespace</span> Repositorio.Entidades
+{
+    <span style="color:Blue;">public</span> <span style="color:Blue;">class</span> Cliente
+    {
+        <span style="color:Blue;">public</span> <span style="color:Blue;">int</span> ClienteID { <span style="color:Blue;">get</span>; <span style="color:Blue;">set</span>; }
+        <span style="color:Blue;">public</span> <span style="color:Blue;">string</span> Nome { <span style="color:Blue;">get</span>; <span style="color:Blue;">set</span>; }
+        <span style="color:Blue;">public</span> <span style="color:Blue;">string</span> CNPJ { <span style="color:Blue;">get</span>; <span style="color:Blue;">set</span>; }
+        <span style="color:Blue;">public</span> <span style="color:Blue;">string</span> Endereco { <span style="color:Blue;">get</span>; <span style="color:Blue;">set</span>; }
+        <span style="color:Blue;">public</span> <span style="color:Blue;">string</span> Telefone { <span style="color:Blue;">get</span>; <span style="color:Blue;">set</span>; }
+        <span style="color:Blue;">public</span> <span style="color:Blue;">bool</span> Ativo { <span style="color:Blue;">get</span>; <span style="color:Blue;">set</span>; }
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Pergunta: Qual propriedade é a chave primária? No Entity Framework 6 se uma propriedade contém o nome da classe seguido de ID, esta será a chave primária. No caso da classe Cliente, a propriedade ClienteID será a chave. E, se eu quiser colocar outro nome, por exemplo ChaveCliente ou apenas ID? Aí você terá que usar o Data Annotations e informar o atributo [Key] para a respectiva propriedade.</p><p>Pronto, salve a classe e compile o projeto F6. Se houver algum erro nesta classe, corrija porque é necessário que o projeto esteja compilado 100% com sucesso.</p><p>O próximo passo é criar um novo projeto chamado Repositorio.DAL, o qual será o responsável por manipular a classe cliente criada. Sendo assim, no Solution Explorer, Add / New Project, escolha o template de Class Library. Em Name digite Repositorio.DAL e clique no botão OK, conforme a figura 3.</p><p><img id="35752F61B278011DD17F3F3CE134EBFE" alt="Dn630213.35752F61B278011DD17F3F3CE134EBFE(pt-br,MSDN.10).png" src="./repositorio_files/IC715938.png" title="Dn630213.35752F61B278011DD17F3F3CE134EBFE(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 3 – Projeto de DAL</p><p>Da mesma forma que o projeto anterior, exclua a Class1.cs criada automaticamente. O primeiro passo é adicionar as referências necessárias. Vamos utilizar o fantástico recurso do Nuget para esta tarefa, portanto, selecione o menu Tools / Library Package Manager / Package Manager Console. Conforme a figura 4, será aberta a janela do Nuget, então na combobox Default project, selecione Repositorio.DAL, afinal temos dois projetos. Em seguida digite:</p><h3 class="subheading">Install-Package EntityFramework</h3><p><img id="39EDFC7A41E5BF0E829B14B6520984E2" alt="Dn630213.39EDFC7A41E5BF0E829B14B6520984E2(pt-br,MSDN.10).png" src="./repositorio_files/IC715939.png" title="Dn630213.39EDFC7A41E5BF0E829B14B6520984E2(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 4 – Instalação do EF via Nuget</p><p>Desta forma o EF será instalado apenas neste projeto. Note ainda que a versão instalada é a 6.0.2, fato que é a mais recente no mercado no momento em que estou escrevendo este artigo. Não se assuste se for instalada uma versão superior do EF quando você for simular estes códigos.</p><p>Em seguida, no projeto Repositorio.DAL, clique com o botão direito em References no Solution Explorer, selecione Add Reference. Na janela aberta, selecione Assemblies, localize o namespace System.Data.Entity, conforme a figura 5. Ao final, clique no botão OK.</p><p><img id="E9913133D2F9D7B6D3DB03D23A39D310" alt="Dn630213.E9913133D2F9D7B6D3DB03D23A39D310(pt-br,MSDN.10).png" src="./repositorio_files/IC715940.png" title="Dn630213.E9913133D2F9D7B6D3DB03D23A39D310(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 5 – Adicionar referências do namespace</p><p>Repita o mesmo passo, mas referencie o projeto Repositorio.Entidades, conforme a figura 6, afinal o DAL irá gerenciar as entidades.</p><p><img id="167F8667805B8C94A6FBAB388C57CC4D" alt="Dn630213.167F8667805B8C94A6FBAB388C57CC4D(pt-br,MSDN.10).png" src="./repositorio_files/IC715941.png" title="Dn630213.167F8667805B8C94A6FBAB388C57CC4D(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 6 – Adicionar referências do projeto de entidades</p><h2 class="subheading">Contexto</h2><p>Excelente, já temos todas as referências necessárias. Pressione F6 para compilar com sucesso. Em seguida, por uma questão de estrutura e organização, crie as pastas Contexto, Repositorios e Base, sendo que a Base é dentro de Repositorios. Na pasta Contexto, crie uma nova classe chamada BancoContexto.cs. Adicione os seguintes namespaces:</p>
+        
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_06071f59-9611-450f-8feb-e8ef7e7ddd41');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_06071f59-9611-450f-8feb-e8ef7e7ddd41" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> System.Data.Entity;
+<span style="color:Blue;">using</span> Repositorio.Entidades;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Esta será a classe de contexto, portanto, para que ela gerencie toda a parte de banco de dados (criar, excluir e gerenciar o DB) é preciso herda-la de DbContext. Sendo assim, na assinatura da classe, adicione o : DbContext. </p><p>Em seguida, precisamos informar qual será a string de conexão, afinal o banco ainda não existe, e mesmo que existisse, em algum lugar deverá estar o caminho completo da conexão, certo? Sendo assim, no construtor desta classe, adicione o : base(“chave”), sendo que a chave é exatamente o caminho da conexão que está descrito no arquivo App.Config ou Web.Config (se for ASP.NET). Mas atenção: no projeto Repositorio.DAL você NÃO deverá incluir esta chave no App.Config. Eu disse que a chave deverá constar apenas no projeto que irá solicitar o DAL.</p><p>Por default, chamei a chave de ConnDB e mantenha este nome para que possamos definir o padrão. Muitos chamam de strConn ou stringConexao ou ConexaoBanco, enfim, o importante é que você defina o seu padrão e passe para todos os projetos que a utilizarão.</p><p>Dica: o ConnDB não pode ser dinâmico? Sim, isto não é nenhum problema pois se você analisar o construtor do DbContext irá notar que há várias sobrecargas, as quais você pode construir o código para ser uma chave dinâmica.</p><p>Veja como está a classe até o momento:</p>
+        
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_a92256db-a282-4984-930a-1170df712648');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_a92256db-a282-4984-930a-1170df712648" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> System.Data.Entity;
+<span style="color:Blue;">using</span> Repositorio.Entidades;
+
+<span style="color:Blue;">namespace</span> Repositorio.DAL.Contexto
+{
+    <span style="color:Blue;">public</span> <span style="color:Blue;">class</span> BancoContexto : DbContext
+    {
+        <span style="color:Blue;">public</span> BancoContexto() : <span style="color:Blue;">base</span>(<span style="color:#A31515;">"ConnDB"</span>) { }
+
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Pressione F6 para compilar e certifique-se que está 100% com sucesso.</p><h2 class="subheading">Interface da Classe</h2><p>O que é uma interface de uma classe? Entendemos que interface é um contrato de como uma classe deve ser implementada, contendo todas as ações definidas, não as implementações de códigos de comportamentos. Um exemplo bem clássico é o famoso contrato de aluguel, o qual são definidos na interface (contrato padrão), os nomes do inquilino e proprietário, data de pagamento, multas, imóvel, etc. E, quando se redige o contrato do aluguel é que teremos os dados preenchidos em si.</p><p>No nosso caso, vamos criar na pasta Base uma interface chamada IRepositorio.cs, contendo todos os métodos que deverão ser implementados pela classe que usar esta interface como referência. Logo de cara, não se assuste com a assinatura da classe. Existe o TEntity declarado, assim como quem é, ou seja, neste caso TEntity é uma class. Veja o código a seguir.</p>
+        
+<div id="code-snippet-4" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_c5d3ac8d-482f-410a-b6b4-7d1a5e9f5bc9');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_c5d3ac8d-482f-410a-b6b4-7d1a5e9f5bc9" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> System;
+<span style="color:Blue;">using</span> System.Collections.Generic;
+<span style="color:Blue;">using</span> System.Linq;
+<span style="color:Blue;">using</span> System.Text;
+<span style="color:Blue;">using</span> System.Threading.Tasks;
+
+<span style="color:Blue;">namespace</span> Repositorio.DAL.Repositorios.Base
+{
+    <span style="color:Blue;">interface</span> IRepositorio&lt;TEntity&gt; <span style="color:Blue;">where</span> TEntity : <span style="color:Blue;">class</span>
+    {
+        IQueryable&lt;TEntity&gt; GetAll();
+        IQueryable&lt;TEntity&gt; Get(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate);
+        TEntity Find(<span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] key);
+        <span style="color:Blue;">void</span> Atualizar(TEntity obj);
+        <span style="color:Blue;">void</span> SalvarTodos();
+        <span style="color:Blue;">void</span> Adicionar(TEntity obj);
+        <span style="color:Blue;">void</span> Excluir(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate);
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Veja uma descrição detalhada dos métodos da interface para um melhor entendimento.</p><table><tbody><tr><th><p><span class="highlight">IQueryable&lt;TEntity&gt; GetAll();</span></p></th><th><p>Retorna todos os dados como IQueryable, ou seja, você pode retornar a lista e aplicar expressões Lambda para filtrar e classificar dados, por exemplo.</p></th></tr><tr><td><p><span class="highlight">IQueryable&lt;TEntity&gt; Get(Func&lt;TEntity, bool&gt; predicate);</span></p></td><td><p>Retona todos os dados que atenderem a um critério passado em tempo de execução através de uma expressão Lambda. Neste caso, o Func é um delegate que será criado dinâmicamente, aplica-se o predicate para verificar se o dado atende ao critério. Aqui eu sei que dará um nó na cabeça, mas é preciso um conhecimento de C# avançado, então, pesquise sobre Delegates, Func e predicate.</p></td></tr><tr><td><p><span class="highlight">TEntity Find(params object[] key);</span></p></td><td><p>Irá aplicar um filtro pela chave primária da classe em si. Quem é a chave primária? Não importa porque o Find recebe um array de object e efetua a pesquisa. Com isto, se você tiver uma chave composta, o Find se encarrega de tudo, basta você passar os dados e pronto.</p></td></tr><tr><td><p><span class="highlight">void Atualizar(TEntity obj); </span></p></td><td><p>Recebe o objeto TEntity para efetuar o Update no banco.</p></td></tr><tr><td><p><span class="highlight">void SalvarTodos();</span></p></td><td><p>Chama o método SaveChanges para efetivar todas as alterações no contexto.</p></td></tr><tr><td><p><span class="highlight">void Adicionar(TEntity obj);</span></p></td><td><p>Recebe o objeto TEntity para efetuar o Insert no banco.</p></td></tr><tr><td><p><span class="highlight">void Excluir(Func&lt;TEntity, bool&gt; predicate);</span></p></td><td><p>Este método irá excluir registros, sendo que a condição é dinâmica através de uma expressão Lambda e aplica-se o predicate para a condição passada.</p></td></tr></tbody></table><p>Agora que já temos a interface criada, vamos criar e implementar a classe. Portanto, na pasta Base, adicione uma classe chamada Repositorio. Adicione os seguintes namespaces:</p>
+        
+<div id="code-snippet-5" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_acc12f2f-8ca7-47bb-a632-a09045585e6f');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_acc12f2f-8ca7-47bb-a632-a09045585e6f" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> System.Data.Entity;
+<span style="color:Blue;">using</span> Repositorio.DAL.Contexto;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Veja a classe completa com todas as implementações. Note que a classe é abstract para que ela não possa ser herdada. Na assinatura TEntity também é uma classe (where TEntity : class). Note que esta classe herda outras duas interfaces, sendo IDisposable (para que possa suportar o Dispose) e IRepositorio&lt;TEntity&gt;. Quando você digitar estas heranças, o Visual Studio coloca uma notação em azul dizendo que não estão implementadas. Então, basta selecionar as classes (IDisposable e IRepositorio) e dar um CTRL + . (ponto) duas vezes. Toda a estrutura das interfaces serão criadas nesta classe.</p><p>A seguir, para cada método você deverá digitar os códigos de acordo com a funcionalidade. Uma coisa interessante que você deve estar questionando: como é que a classe sabe quando serão feitos os selects, updates, deletes e inserts? Pois é meu amigo, não é mágica não, são códigos dinâmicos que o Entity Framework implementa com o DbContext e DbSet. Cabe a nós informar a entidade e os critérios, o restante é com o compilador que irá executar.</p><p>Certa ocasião, um aluno me perguntou: Mas Renato, e as instruções T-SQL ou PL-SQL, onde as escrevo? Eu disse: você não escreverá nenhuma linha disso nunca mais, pois quem é o responsável em montar toda a instrução é o compilador, tudo agora é dinâmico. Nem preciso dizer que o olhar de interrogação ficou estampado no rosto da pessoa. E, você leitor, aprofunde-se nestes códigos para entender e tirar mais proveito ainda.</p>
+        
+<div id="code-snippet-6" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_cebad2cb-e101-47a6-8913-b052187df937');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_cebad2cb-e101-47a6-8913-b052187df937" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> System;
+<span style="color:Blue;">using</span> System.Collections.Generic;
+<span style="color:Blue;">using</span> System.Linq;
+<span style="color:Blue;">using</span> System.Text;
+<span style="color:Blue;">using</span> System.Threading.Tasks;
+
+<span style="color:Blue;">using</span> System.Data.Entity;
+<span style="color:Blue;">using</span> Repositorio.DAL.Contexto;
+
+<span style="color:Blue;">namespace</span> Repositorio.DAL.Repositorios.Base
+{
+    <span style="color:Blue;">public</span> <span style="color:Blue;">abstract</span> <span style="color:Blue;">class</span> Repositorio&lt;TEntity&gt; : IDisposable,
+       IRepositorio&lt;TEntity&gt; <span style="color:Blue;">where</span> TEntity : <span style="color:Blue;">class</span>
+    {
+        BancoContexto ctx = <span style="color:Blue;">new</span> BancoContexto();
+        <span style="color:Blue;">public</span> IQueryable&lt;TEntity&gt; GetAll()
+        {
+            <span style="color:Blue;">return</span> ctx.Set&lt;TEntity&gt;();
+        }
+
+        <span style="color:Blue;">public</span> IQueryable&lt;TEntity&gt; Get(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate)
+        {
+            <span style="color:Blue;">return</span> GetAll().Where(predicate).AsQueryable();
+        }
+
+        <span style="color:Blue;">public</span> TEntity Find(<span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] key)
+        {
+            <span style="color:Blue;">return</span> ctx.Set&lt;TEntity&gt;().Find(key);
+        }
+
+        <span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Atualizar(TEntity obj)
+        {
+            ctx.Entry(obj).State = EntityState.Modified;
+        }
+
+        <span style="color:Blue;">public</span> <span style="color:Blue;">void</span> SalvarTodos()
+        {
+            ctx.SaveChanges();
+        }
+
+        <span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Adicionar(TEntity obj)
+        {
+            ctx.Set&lt;TEntity&gt;().Add(obj);
+        }
+
+        <span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Excluir(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate)
+        {
+            ctx.Set&lt;TEntity&gt;()
+                .Where(predicate).ToList()
+                .ForEach(del =&gt; ctx.Set&lt;TEntity&gt;().Remove(del));
+        }
+
+        <span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Dispose()
+        {
+            ctx.Dispose();
+        }
+    }
+}
+
+Aqui requer uma explicação mais detalhada dos métodos, afinal, a <span style="color:Blue;">interface</span> diz o método e a classe é que diz como o código será implementado.
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O primeiro é a declaração do BancoContexto, já que tudo depende dele, nada mais justo que referenciá-lo.</p>
+        
+<div id="code-snippet-7" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_92216efb-3623-48ea-acfd-7a8c160ab496');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_92216efb-3623-48ea-acfd-7a8c160ab496" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>BancoContexto ctx = <span style="color:Blue;">new</span> BancoContexto();
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Já o método GetAll, simplesmente recebe a entidade em si, Cliente por exemplo, e retorna um IQueryable (lista) completa, um “Select *”.</p>
+        
+<div id="code-snippet-8" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8076770f-d5d6-4c4c-9d11-ce142d672d25');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8076770f-d5d6-4c4c-9d11-ce142d672d25" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> IQueryable&lt;TEntity&gt; GetAll()
+{
+     <span style="color:Blue;">return</span> ctx.Set&lt;TEntity&gt;();
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O método Get é o melhor de todos porque além de ser 100% dinâmico, você usa expressões Lambda o tempo todo. Sempre digo que todo desenvolvedor DEVE saber Lambda, pois sem isto não é possível viver de forma produtiva. Este método Get retorna também uma lista IQueryable, no entanto, o parâmetro de entrada é uma Func da entidade, Cliente por exemplo, o qual será passado o critério a ser aplicado no predicate. Nos bastidores, você deverá passar uma expressão Lambda, por exemplo “c =&gt; c.Nome.Contains("microsoft")”. Já na implementação, é chamado o método GetAll, explicado anteriomente, e aplica-se o filtro Where com a Lambda recebida na entrada.</p>
+        
+<div id="code-snippet-9" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4eda53a3-c99e-4a13-8c82-c7fab3591f55');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_4eda53a3-c99e-4a13-8c82-c7fab3591f55" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> IQueryable&lt;TEntity&gt; Get(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate)
+{
+     <span style="color:Blue;">return</span> GetAll().Where(predicate).AsQueryable();
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Pergunta: Quantas vezes a classe vai ao banco de dados? Duas correto, pois primeiro executa o GetAll, vai no banco e retorna todos os dados, e em seguida vai no banco novamente para aplicar o Where, certo? Errado! A expressão Lambda é montada em sua árvore de expressões, e no momento em que irá ser usada ou retornada a quem chamou é que vai ao banco de dados. Neste caso o GetAll será um subterfújio para aplicar o predicate com o critério, ou seja, irá apenas uma vez ao banco de dados. O legal aqui é rodar este método com o Profile do SQL ativado para se ver a instrução T-SQL montada para isto.</p><p>O Find busca automaticamente pela chave primária, sendo que a entrada do parâmetro é um array de object, ou seja, pode ser apenas um campo ou um conjunto que compõe a chave composta.</p>
+        
+<div id="code-snippet-10" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_b820273d-7bb2-4ca7-b633-a6bcb1c6b710');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_b820273d-7bb2-4ca7-b633-a6bcb1c6b710" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> TEntity Find(<span style="color:Blue;">params</span> <span style="color:Blue;">object</span>[] key)
+{
+       <span style="color:Blue;">return</span> ctx.Set&lt;TEntity&gt;().Find(key);
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O Atualizar recebe a entidade Cliente, por exemplo, e atribui o Modified para o EntityState, informando ao contexto que tal entidade foi modificada. Atenção: aqui não é feito nenhum Update no banco, pois quem é o responsável por isto é o SaveChanges do método Salvar.</p>
+        
+<div id="code-snippet-11" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_c3a14513-d646-474d-8171-2f8127e9d63d');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_c3a14513-d646-474d-8171-2f8127e9d63d" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Atualizar(TEntity obj)
+{
+       ctx.Entry(obj).State = EntityState.Modified;
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O SalvarTodos chama o SaveChanges do contexto e efetiva todas as operações de Update, Insert ou Delete no banco de dados. O contexto do Entity Framework é uma forma de manipular dados na memória apenas, nada no banco de dados, portanto, você pode ter muitas entidades no contexto (até o limite da memória da máquina), sendo que cada entidade pode ter operações distintas de Update, Delete ou Insert. Deixe os dados na memória e quando precisar, chame o SaveChanges para efetivar fisicamente no banco.</p><p>Pergunta 1: Posso colocar 300 entidades no mesmo contexto no EF 6? Sim e deve, pois já fiz testes de performance em relação à quantidade de entidades no mesmo contexto, e não há nenhum problema de lentidão. Em projetos médios é comum ter muitas entidades no mesmo contexto, e isto até facilita o gerenciamento, pois basta um SaveChanges e pronto.</p><p>Pergunta 2: Mas não é aconselhável dividir as entidades em diversos contextos? No EF 6 não é preciso, pois o gerencimento do contexto em apenas um facilita muito. Já em versões anteriores era um problema sério. No EF 4 e 5 tive projetos em diversos contextos, o que causou um problema sério de união de contextos, transações em diferentes contextos e atualizações de entidades. Dica: migre urgente para o EF 6, no mínimo.</p>
+        
+<div id="code-snippet-12" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_a172d5ec-eb93-417a-9c7a-e2196f2a6559');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_a172d5ec-eb93-417a-9c7a-e2196f2a6559" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">void</span> SalvarTodos()
+{
+       ctx.SaveChanges();
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O Adicionar recebe a entidade Cliente, por exemplo, e adiciona o registro através do método Add. Nos bastidores a instrução Insert será criada devidamente correta com todos os parâmetros declarados para proteger qualquer tentativa de injeção de SQL.</p><p>Pergunta 1: Posso incluir diversos objetos de uma vez? Sim e deve. Como tudo estará no contexto, ou seja na memória, vá incluindo quantos registros quiser em todas as entidades, e ao final chame o SalvarTodos apenas uma vez.</p><p>Pergunta 2: Se eu tiver uma lista de clientes a serem incluídos, preciso adicionar e salvar cada um? Quando se tem uma lista, você deve aplicar uma Action para disparar o ForEach a partir da lista, sendo que a Action será o delegate que irá chamar o Adicionar, passando cada um dos elementos da lista. Ao final de tudo é que chama-se o SalvarTodos apenas uma vez. Preste atenção mais adiante no projeto de Console, pois iremos incluir alguns clientes desta forma. E, prepare o balde para babar com o código. Prometo que os teus loopings nunca mais serão iguais, viva o C# 5!</p>
+        
+<div id="code-snippet-13" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_d3bee879-6fd5-4f91-ac31-9efdec7c6e40');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_d3bee879-6fd5-4f91-ac31-9efdec7c6e40" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Adicionar(TEntity obj)
+{
+       ctx.Set&lt;TEntity&gt;().Add(obj);
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O Excluir na minha opinião é a melhor funcionalidade de conceitos aplicados até agora. O parâmetro de entrada é uma expressão Lambda que será usada no predicate. Pense da seguinte forma: desejo excluir os clientes da cidade=florianópolis ou ativo=false ou contém o nome=jose, enfim, quem monta a expressão é a situação, pois ela tem que ser dinâmica para se adequar ao momento. E, ao mesmo tempo, a implementação deverá atender a TODAS as situações. Sendo assim, o contexto ctx seleciona a entidade TEntity (cliente, por exemplo), aplica o filtro Where com a condição definida no predicate (expressão Lambda do parâmetro). Em seguida, é preciso aplicar o ToList para converter para uma lista. E, aí sim vem a glória do ForEach para varrer toda a lista e remover todos os itens que atenderem ao critério. Como que isto acontece nos bastidores? É simples (como se fosse), o compilador irá disparar um delegate para criar um método em tempo de execução, o qual irá excluir o item da lista. Ou seja, tudo ocorre em tempo de execução, dinamicamente com delegate.</p><p>Pergunta 1: Mas não posso usar o foreach normal ou o for? Sim, pode, mas o código ficará maior, com mais linhas, porém de fácil manutenção! Isto até que você se acostume com a sintaxe do ForEach da lista.</p><p>Pergunta 2: Posso ter dois métodos Excluir, um para excluir pela chave primária e outro genérico com parâmetros? Pode, porém não há nenhuma necessidade, pois este que criei já faz estas duas funções.</p>
+        
+<div id="code-snippet-14" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_defd4d72-665e-4e5b-ad21-2939a956326f');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_defd4d72-665e-4e5b-ad21-2939a956326f" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Excluir(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate)
+{
+       ctx.Set&lt;TEntity&gt;()
+          .Where(predicate).ToList()
+          .ForEach(del =&gt; ctx.Set&lt;TEntity&gt;().Remove(del));
+}
+
+O Dispose é usado para destruir o objeto instanciado na memória, isto é bem comum no .NET.
+
+<span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Dispose()
+{
+       ctx.Dispose();
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <h2 class="subheading">Classe Repositório de Cliente</h2><p>Nos passos anteriores criamos a interface e a classe repositório. Agora é preciso criar a classe de repositório de cada entidade. Como temos a classe Cliente, adicione uma nova classe chamada ClienteRepositorio na pasta Repositorio. Veja o código a seguir com as duas referências e a herança de Repositório&lt;TEntity&gt;.</p>
+        
+<div id="code-snippet-15" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_03cae056-2a9b-4a4d-85bc-83f4fb003065');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_03cae056-2a9b-4a4d-85bc-83f4fb003065" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> Repositorio.DAL.Repositorios.Base;
+<span style="color:Blue;">using</span> Repositorio.Entidades;
+
+<span style="color:Blue;">namespace</span> Repositorio.DAL.Repositorios
+{
+    <span style="color:Blue;">public</span> <span style="color:Blue;">class</span> ClienteRepositorio : Repositorio&lt;Cliente&gt;
+    {
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Para efeito de acompanhamento, veja na figura 7 a estrutura do Solution Explorer até o momento com os dois projetos, pastas e classes.</p><p><img id="B4092F08608F162540D1AC334275253A" alt="Dn630213.B4092F08608F162540D1AC334275253A(pt-br,MSDN.10).png" src="./repositorio_files/IC715942.png" title="Dn630213.B4092F08608F162540D1AC334275253A(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 7 – Estrutura do projeto</p><p>Compile F6 o projeto e certifique-se que está 100% com sucesso.</p><h2 class="subheading">Projeto de Console Application</h2><p>Agora que já temos toda a parte de entidade e repositório definida, podemos iniciar os projetos que irão consumir estes outros dois. Vamos iniciar com um projeto para inserir clientes, utilizando um recurso que citei sobre lista com ForEach. No Solution Explorer, adicione um novo projeto do tipo Console Application chamado Repositorio.Console, conforme a figura 8.</p><p><img id="ABF1352376BE06FCD7CA57637392F0DB" alt="Dn630213.ABF1352376BE06FCD7CA57637392F0DB(pt-br,MSDN.10).png" src="./repositorio_files/IC715943.png" title="Dn630213.ABF1352376BE06FCD7CA57637392F0DB(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 8 – Projeto de Console</p><p>O primeiro passo a fazer é adicionar as referências. Abra o Package Console Manager, na combobox de Default project, selecione Repositorio.Console e na linha de comando, digite a seguinte linha para instalar o Entity Framework 6.</p><h3 class="subheading">PM&gt; Install-Package EntityFramework</h3><p>Pronto, agora resta adicionar as referências aos outros dois projetos, conforme a figura 9.</p><p><img id="B1D0A90CE5C4BCC16F8EBABD9D563582" alt="Dn630213.B1D0A90CE5C4BCC16F8EBABD9D563582(pt-br,MSDN.10).png" src="./repositorio_files/IC715944.png" title="Dn630213.B1D0A90CE5C4BCC16F8EBABD9D563582(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 9 – Referências dos dois projetos</p><p>Aqui vai uma dica muito importante. Este projeto de Console é o que irá consumir o repositório, portanto, neste projeto é preciso informar a string de conexão com o banco de dados. Para isto, abra o arquivo App.config, localize a tag &lt;entityFramework&gt; e antes desta, adicione as seguintes linhas:</p>
+        
+<div id="code-snippet-16" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_0e66d217-0dcf-4fc4-ab9a-6f71898b6bcb');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_0e66d217-0dcf-4fc4-ab9a-6f71898b6bcb" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;connectionStrings&gt;
+    &lt;add name=<span style="color:#A31515;">"ConnDB"</span> connectionString=<span style="color:#A31515;">"Data Source=localhost;Initial Catalog=BancoRepositorio;Integrated Security=True"</span> providerName=<span style="color:#A31515;">"System.Data.SqlClient"</span> /&gt;
+  &lt;/connectionStrings&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Note que a chave chama-se ConnDB, e por favor não digite diferente porque o DbContext lá no projeto de repositório procura por este nome. Já em connectionString você deve fornecer o caminho completo de onde pretende criar o banco de dados no SQL Server. Sendo assim, caso tenha usuário e senha, forneça-os. Salve e feche este arquivo.</p><p>Em seguida, abra o arquivo Program.cs, adicione os seguintes namespaces. Sendo assim, já temos acesso ao repositório e a entidade Cliente.</p>
+        
+<div id="code-snippet-17" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_3bbda07d-2a5d-44d8-af8c-99e312557c2c');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_3bbda07d-2a5d-44d8-af8c-99e312557c2c" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> Repositorio.DAL.Repositorios;
+<span style="color:Blue;">using</span> Repositorio.Entidades;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>O único método estático Main já existe, portanto, adicione uma chamada para um método Adicionar, assim como o código do mesmo.</p>
+        
+<div id="code-snippet-18" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_44bf3370-5eb0-4b32-b41d-b72bbf9ad986');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_44bf3370-5eb0-4b32-b41d-b72bbf9ad986" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">namespace</span> Repositorio.Console
+{
+    <span style="color:Blue;">class</span> Program
+    {
+        <span style="color:Blue;">static</span> <span style="color:Blue;">void</span> Main(<span style="color:Blue;">string</span>[] args)
+        {
+            Adicionar();
+
+        }
+
+        <span style="color:Blue;">private</span> <span style="color:Blue;">static</span> <span style="color:Blue;">void</span> Adicionar()
+        {
+            <span style="color:Blue;">using</span> (<span style="color:Blue;">var</span> repClientes = <span style="color:Blue;">new</span> ClienteRepositorio())
+            {
+                <span style="color:Blue;">new</span> List&lt;Cliente&gt;
+                {
+                    <span style="color:Blue;">new</span> Cliente { Nome=<span style="color:#A31515;">"Microsoft"</span>, Ativo=<span style="color:Blue;">true</span>, CNPJ=<span style="color:#A31515;">"9394.4343/0001-55"</span>, 
+                                    Endereco=<span style="color:#A31515;">"1, Microsoft One"</span>, Telefone=<span style="color:#A31515;">"11574739494"</span>},
+                    <span style="color:Blue;">new</span> Cliente { Nome=<span style="color:#A31515;">"Google"</span>, Ativo=<span style="color:Blue;">true</span>, CNPJ=<span style="color:#A31515;">"1234.9494/0001-33"</span>, 
+                                    Endereco=<span style="color:#A31515;">"12, Santa Clara, CA"</span>, Telefone=<span style="color:#A31515;">"1185858483"</span>},
+                    <span style="color:Blue;">new</span> Cliente { Nome=<span style="color:#A31515;">"Oracle"</span>, Ativo=<span style="color:Blue;">true</span>, CNPJ=<span style="color:#A31515;">"9876.4433/0002-44"</span>, 
+                                    Endereco=<span style="color:#A31515;">"54, Santa Monica"</span>, Telefone=<span style="color:#A31515;">"4884848592"</span>}
+                }.ForEach(repClientes.Adicionar);
+
+                repClientes.SalvarTodos();
+
+                System.Console.WriteLine(<span style="color:#A31515;">"Clientes adicionadas com sucesso."</span>);
+
+                System.Console.WriteLine(<span style="color:#A31515;">"=======  clientes cadastrados ==========="</span>);
+                <span style="color:Blue;">foreach</span> (<span style="color:Blue;">var</span> c <span style="color:Blue;">in</span> repClientes.GetAll())
+                {
+                    System.Console.WriteLine(<span style="color:#A31515;">"{0} - {1}"</span>, c.ClienteID, c.Nome);
+                }
+
+                System.Console.ReadKey();
+            }
+        }
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Vamos a explicação detalhada do método Adicionar. Como o repositório suporta o Dispose (nós implementamos), podemos usar o using, assim quando for encontrado o fechamento das chaves do using, o objeto já é liberado e destruído da memória. O using faz um referência ao ClienteRepositorio, o qual foi atribuído à variável repClientes. Em seguida é montada uma lista com Generics (List&lt;T&gt;) onde monto três objetos do tipo cliente. Em seguida, como é uma lista, há o ForEach disponível que irá disparar uma Action para um delegate dinâmico. Este delegate vai chamar o método Adicionar do repositório repClientes. O melhor de tudo é que isto será criado em tempo de execução.</p><p>Pergunta: Posso criar um foreach comum? Sim, você pode criar um foreach comum, varrer toda a lista de elementos de clientes, e para cada iteração, você chama o Adicionar do repositório. Mas, convenhamos, melhore o seu código e muito com o Action que dispara o delegate.</p><p>Ao final, todos os clientes estarão apenas na memória, nada de banco de dados. Então, cabe chamar o método SalvarTodos para efetivar a inclusão no banco fisicamente. Uma vez incluídos, para ter certeza disto, criei um código para chamar o método GetAll e listar os IDs e  nomes dos clientes.</p><p>Pressione F6 para compilar e certifique-se que tudo esteja 100% com sucesso. O próximo passo é executar este projeto de Console. No entanto, na lista de projetos o de Console não está em negrito, significando que quando você pressionar F5, o projeto em negrito é que será executado. Então, clique com o botão direito no projeto de Console e selecione Set as StartUp Project. Agora sim, pressione F5 e aguardo a execução onde o banco de dados será criado na hora. Veja na figura 10 que os clientes foram cadastrados com sucesso, pois estão listados.</p><p><img id="203E61C4C64550C6674753E204072E6A" alt="Dn630213.203E61C4C64550C6674753E204072E6A(pt-br,MSDN.10).png" src="./repositorio_files/IC715945.png" title="Dn630213.203E61C4C64550C6674753E204072E6A(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 10 – Clientes cadastrados</p><p>Não execute novamente senão os mesmos clientes serão adicionados. Comente a linha da chamada do método Adicionar no Main para evitar de cadastrar tudo novamente. Este foi o primeiro teste somente para cadastrar alguns dados.</p><p>Agora, veja um teste de como criar uma expressão Lambda e passa-la como critério para o método de Excluir dados. No Main, crie uma chamada para o método ExcluirVariosClientes, assim como o respectivo código.</p>
+        
+<div id="code-snippet-19" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_7d5e4f22-707a-445d-bb3f-56f213322a35');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_7d5e4f22-707a-445d-bb3f-56f213322a35" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">static</span> <span style="color:Blue;">void</span> Main(<span style="color:Blue;">string</span>[] args)
+{
+    <span style="color:Green;">//Adicionar();</span>
+
+    ExcluirVariosClientes();
+}
+
+<span style="color:Blue;">private</span> <span style="color:Blue;">static</span> <span style="color:Blue;">void</span> ExcluirVariosClientes()
+{
+    <span style="color:Blue;">using</span> (<span style="color:Blue;">var</span> repClientes = <span style="color:Blue;">new</span> ClienteRepositorio())
+    {
+        <span style="color:Blue;">new</span> List&lt;Cliente&gt;
+        {
+            <span style="color:Blue;">new</span> Cliente { Nome=<span style="color:#A31515;">"Renato Haddad"</span>, Telefone=<span style="color:#A31515;">"48575757"</span>},
+            <span style="color:Blue;">new</span> Cliente { Nome=<span style="color:#A31515;">"Renato Marcantonio"</span>, Telefone=<span style="color:#A31515;">"55929292"</span>},
+            <span style="color:Blue;">new</span> Cliente { Nome=<span style="color:#A31515;">"Renato Jose"</span>, Telefone=<span style="color:#A31515;">"77565644"</span>}
+        }.ForEach(repClientes.Adicionar);
+
+        repClientes.SalvarTodos();
+        System.Console.WriteLine(<span style="color:#A31515;">"Clientes Renato's adicionados"</span>);
+
+        <span style="color:Green;">// lista todos os clientes</span>
+        <span style="color:Blue;">foreach</span> (<span style="color:Blue;">var</span> c <span style="color:Blue;">in</span> repClientes.GetAll())
+        {
+            System.Console.WriteLine(c.ClienteID + <span style="color:#A31515;">" - "</span> + c.Nome);
+        }
+
+        <span style="color:Green;">// excluir vários clientes Renato</span>
+        <span style="color:Blue;">try</span>
+        {
+            repClientes.Excluir(c =&gt; c.Nome.StartsWith(<span style="color:#A31515;">"Renato"</span>));
+            repClientes.SalvarTodos();
+            System.Console.WriteLine(<span style="color:#A31515;">"clientes excluidos com sucesso"</span>);
+        }
+        <span style="color:Blue;">catch</span> (Exception)
+        {
+            System.Console.WriteLine(<span style="color:#A31515;">"erro ao excluir um cliente"</span>);
+        }
+        System.Console.ReadKey();
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Neste código basicamente adiciono três clientes que iniciam com o texto Renato, salvo no banco e listo todos para comprovar que foram cadastrados. E, o melhor vem agora na chamada do método repClientes.Excluir. Só para relembrar como está o método, veja o código a seguir. A entrada é uma Func que espera uma expressão Lambda a ser passada ao método de extensão Where do predicate que irá disparar o delegate do ForEach para executar a exclusão dos itens que atendem ao critério.</p>
+        
+<div id="code-snippet-20" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_b32e1853-bccf-48cd-a57c-7421cd4dd4b3');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_b32e1853-bccf-48cd-a57c-7421cd4dd4b3" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">public</span> <span style="color:Blue;">void</span> Excluir(Func&lt;TEntity, <span style="color:Blue;">bool</span>&gt; predicate)
+{
+       ctx.Set&lt;TEntity&gt;()
+          .Where(predicate).ToList()
+          .ForEach(del =&gt; ctx.Set&lt;TEntity&gt;().Remove(del));
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>E qual critério? Neste caso são todos os clientes cuja propriedade Nome inicia (StartsWith) com “Renato”. Ou seja, serão excluídos os três clientes que inclui de teste anteriormente. Cabe dizer que o critério é dinâmico e você pode usar todo o que for suportado pelo C#.</p>
+        
+<div id="code-snippet-21" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_67cc79da-03c1-4575-887c-fdfb06e4553b');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_67cc79da-03c1-4575-887c-fdfb06e4553b" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>c =&gt; c.Nome.StartsWith(<span style="color:#A31515;">"Renato"</span>)
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>E, para finalizar, como o Excluir foi chamado, é preciso invocar o SalvarTodos para efetivar a exclusão dos dados no banco. Pronto, pressione F5 novamente para salvar, compilar e executar o projeto. Caso queira abrir o banco de dados, use o Server Explorer, conforme a figura 11.</p><p><img id="C5231D673936A4F57860C573945BF4C5" alt="Dn630213.C5231D673936A4F57860C573945BF4C5(pt-br,MSDN.10).png" src="./repositorio_files/IC715946.png" title="Dn630213.C5231D673936A4F57860C573945BF4C5(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 11 – Clientes no banco</p><h2 class="subheading">Projeto ASP.NET MVC 5</h2><p>Para ilustrar o consumo do repositório em um projeto MVC 5, crie um novo projeto do tipo Web / ASP.NET Web application, chamado Repositorio.MVC, conforme a figura 12.</p><p><img id="D7A5B0516C4D532C6A4F3D3524C5B9DA" alt="Dn630213.D7A5B0516C4D532C6A4F3D3524C5B9DA(pt-br,MSDN.10).png" src="./repositorio_files/IC715947.png" title="Dn630213.D7A5B0516C4D532C6A4F3D3524C5B9DA(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 12 – Novo projeto Web</p><p>Clique em OK e selecione o template MVC, conforme a figura 13. Veja que não coloquei nenhuma autenticação, pois não é preciso, iremos apenas consumir o repositório.</p><p><img id="AD6D36A437BA16C58DF62167DE005942" alt="Dn630213.AD6D36A437BA16C58DF62167DE005942(pt-br,MSDN.10).png" src="./repositorio_files/IC715948.png" title="Dn630213.AD6D36A437BA16C58DF62167DE005942(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 13 – Projeto MVC 5</p><p>Clique no botão OK e aguarde a criação do projeto completo. Logo de cara, deixe este novo projeto como default para execução, então, no Solution Explorer clique com o botão direito e selecione Set as Startup Project.</p><p>Agora, já instale o Entity Framework 6 via Nuget e adicione as referências aos projetos Repositorio.Entidades e Repositorio.DAL. Pressione F6 para compilar e certifique-se que está 100% com sucesso.</p><p>O próximo passo é referenciar a string de conexão que será usada no projeto de Repositório.DAL. Para isto, abra o arquivo Web.Config, localize a tag &lt;/configSections &gt; e após esta tag, adicione o bloco a seguir. Atenção, não erre no nome da chave ConnDB, pois esta é a chave que o DAL irá procurar para localizar o banco de dados. Mais uma vez, nem preciso dizer que caso o seu SQL Server tenha autenticação, adicione o UserId e a Password, assim como o nome do servidor onde o banco está.</p>
+        
+<div id="code-snippet-22" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_d27e4dc5-ece3-47f4-95c8-4b300387d7ca');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_d27e4dc5-ece3-47f4-95c8-4b300387d7ca" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;connectionStrings&gt;
+    &lt;add name=<span style="color:#A31515;">"ConnDB"</span> connectionString=<span style="color:#A31515;">"Data Source=localhost;Initial Catalog=BancoRepositorio;Integrated Security=True"</span> providerName=<span style="color:#A31515;">"System.Data.SqlClient"</span> /&gt;
+&lt;/connectionStrings&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <h2 class="subheading">Controller de Clientes</h2><p>Um projeto MVC 5 é tão fácil de se criar todas as Views de CRUD, que há templates (scaffolds) prontos. E, a primeira coisa a fazer é criar o Controller de Clientes. Compile o projeto novamente F6. Na pasta Controllers, clique com o botão direito, selecione Add / Controller. Será aberta a janela de Scaffold (templates) conforme a figura 14, então selecione MVC 5 Controller with views, using Entity Framework.</p><p><img id="68329714786C606CE2132457F6D29734" alt="Dn630213.68329714786C606CE2132457F6D29734(pt-br,MSDN.10).png" src="./repositorio_files/IC715949.png" title="Dn630213.68329714786C606CE2132457F6D29734(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 14 – Adicionar um controller usando o Entity Framework</p><p>Clique no botão Add e preencha os dados conforme a figura 15, sendo: Controller (Controller name) = ClientesController; Model class = Cliente; Data context class = BancoContexto.</p><p><img id="0F3BD0947AB715E37615206DC3EF4DD1" alt="Dn630213.0F3BD0947AB715E37615206DC3EF4DD1(pt-br,MSDN.10).png" src="./repositorio_files/IC715950.png" title="Dn630213.0F3BD0947AB715E37615206DC3EF4DD1(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 15 – Informações para o Controller</p><p>Clique no botão Add e aguarde o Visual Studio criar ClientesController e todas as Views (UI) para fazer o CRUD de dados.</p><h2 class="subheading">Ajustes no Controller</h2><p>Na pasta Controller tem o arquivo ClientesController.cs criado automaticamente usando o scaffold do MVC 5. No entanto, como temos o repositório é preciso fazer alguns ajustes. Sendo assim, no código a seguir, o que for default do MVC 5 eu coloquei como comentário, e o código que você deverá digitar está em seguida dos comentários. Basicamente é preciso retirar todas as referências do contexto e apontar para o ClienteRepositorio.</p>
+        
+<div id="code-snippet-23" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_f4391bb6-64a1-42c3-8383-05ffc9944926');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_f4391bb6-64a1-42c3-8383-05ffc9944926" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre><span style="color:Blue;">using</span> System;
+<span style="color:Blue;">using</span> System.Collections.Generic;
+<span style="color:Blue;">using</span> System.Data;
+<span style="color:Blue;">using</span> System.Data.Entity;
+<span style="color:Blue;">using</span> System.Linq;
+<span style="color:Blue;">using</span> System.Net;
+<span style="color:Blue;">using</span> System.Web;
+<span style="color:Blue;">using</span> System.Web.Mvc;
+<span style="color:Blue;">using</span> Repositorio.Entidades;
+<span style="color:Blue;">using</span> Repositorio.DAL.Contexto;
+<span style="color:Blue;">using</span> Repositorio.DAL.Repositorios;
+
+<span style="color:Blue;">namespace</span> Repositorio.MVC.Controllers
+{
+    <span style="color:Blue;">public</span> <span style="color:Blue;">class</span> ClientesController : Controller
+    {
+        <span style="color:Green;">// Troca o contexto</span>
+        <span style="color:Green;">//private BancoContexto db = new BancoContexto();</span>
+        <span style="color:Blue;">private</span> <span style="color:Blue;">readonly</span> ClienteRepositorio repCli = <span style="color:Blue;">new</span> ClienteRepositorio();
+
+        <span style="color:Green;">// GET: /Clientes/</span>
+        <span style="color:Blue;">public</span> ActionResult Index()
+        {
+            <span style="color:Green;">//return View(db.Cliente.ToList());</span>
+            <span style="color:Blue;">return</span> View(repCli.GetAll().ToList());
+        }
+
+        <span style="color:Green;">// GET: /Clientes/Details/5</span>
+        <span style="color:Blue;">public</span> ActionResult Details(<span style="color:Blue;">int</span>? id)
+        {
+            <span style="color:Blue;">if</span> (id == <span style="color:Blue;">null</span>)
+            {
+                <span style="color:Blue;">return</span> <span style="color:Blue;">new</span> HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            <span style="color:Green;">//Cliente cliente = db.Cliente.Find(id);</span>
+            Cliente cliente = repCli.Find(id);
+
+            <span style="color:Blue;">if</span> (cliente == <span style="color:Blue;">null</span>)
+            {
+                <span style="color:Blue;">return</span> HttpNotFound();
+            }
+            <span style="color:Blue;">return</span> View(cliente);
+        }
+
+        <span style="color:Green;">// GET: /Clientes/Create</span>
+        <span style="color:Blue;">public</span> ActionResult Create()
+        {
+            <span style="color:Blue;">return</span> View();
+        }
+
+        <span style="color:Green;">// POST: /Clientes/Create</span>
+        <span style="color:Green;">// To protect from overposting attacks, please enable the specific properties you want to bind to, for </span>
+        <span style="color:Green;">// more details see http://go.microsoft.com/fwlink/?LinkId=317598.</span>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        <span style="color:Blue;">public</span> ActionResult Create([Bind(Include=<span style="color:#A31515;">"ClienteID,Nome,CNPJ,Endereco,Telefone,Ativo"</span>)] Cliente cliente)
+        {
+            <span style="color:Blue;">if</span> (ModelState.IsValid)
+            {
+                <span style="color:Green;">//db.Cliente.Add(cliente);</span>
+                repCli.Adicionar(cliente);
+                
+                <span style="color:Green;">//db.SaveChanges();</span>
+                repCli.SalvarTodos();
+                <span style="color:Blue;">return</span> RedirectToAction(<span style="color:#A31515;">"Index"</span>);
+            }
+
+            <span style="color:Blue;">return</span> View(cliente);
+        }
+
+        <span style="color:Green;">// GET: /Clientes/Edit/5</span>
+        <span style="color:Blue;">public</span> ActionResult Edit(<span style="color:Blue;">int</span>? id)
+        {
+            <span style="color:Blue;">if</span> (id == <span style="color:Blue;">null</span>)
+            {
+                <span style="color:Blue;">return</span> <span style="color:Blue;">new</span> HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            <span style="color:Green;">//Cliente cliente = db.Cliente.Find(id);</span>
+            Cliente cliente = repCli.Find(id);
+            <span style="color:Blue;">if</span> (cliente == <span style="color:Blue;">null</span>)
+            {
+                <span style="color:Blue;">return</span> HttpNotFound();
+            }
+            <span style="color:Blue;">return</span> View(cliente);
+        }
+
+        <span style="color:Green;">// POST: /Clientes/Edit/5</span>
+        <span style="color:Green;">// To protect from overposting attacks, please enable the specific properties you want to bind to, for </span>
+        <span style="color:Green;">// more details see http://go.microsoft.com/fwlink/?LinkId=317598.</span>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        <span style="color:Blue;">public</span> ActionResult Edit([Bind(Include=<span style="color:#A31515;">"ClienteID,Nome,CNPJ,Endereco,Telefone,Ativo"</span>)] Cliente cliente)
+        {
+            <span style="color:Blue;">if</span> (ModelState.IsValid)
+            {
+                <span style="color:Green;">//db.Entry(cliente).State = EntityState.Modified;</span>
+                repCli.Atualizar(cliente);
+
+                <span style="color:Green;">//db.SaveChanges();</span>
+                repCli.SalvarTodos();
+                <span style="color:Blue;">return</span> RedirectToAction(<span style="color:#A31515;">"Index"</span>);
+            }
+            <span style="color:Blue;">return</span> View(cliente);
+        }
+
+        <span style="color:Green;">// GET: /Clientes/Delete/5</span>
+        <span style="color:Blue;">public</span> ActionResult Delete(<span style="color:Blue;">int</span>? id)
+        {
+            <span style="color:Blue;">if</span> (id == <span style="color:Blue;">null</span>)
+            {
+                <span style="color:Blue;">return</span> <span style="color:Blue;">new</span> HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            <span style="color:Green;">//Cliente cliente = db.Cliente.Find(id);</span>
+            Cliente cliente = repCli.Find(id);
+            <span style="color:Blue;">if</span> (cliente == <span style="color:Blue;">null</span>)
+            {
+                <span style="color:Blue;">return</span> HttpNotFound();
+            }
+            <span style="color:Blue;">return</span> View(cliente);
+        }
+
+        <span style="color:Green;">// POST: /Clientes/Delete/5</span>
+        [HttpPost, ActionName(<span style="color:#A31515;">"Delete"</span>)]
+        [ValidateAntiForgeryToken]
+        <span style="color:Blue;">public</span> ActionResult DeleteConfirmed(<span style="color:Blue;">int</span> id)
+        {
+            <span style="color:Green;">//Cliente cliente = db.Cliente.Find(id);</span>
+            Cliente cliente = repCli.Find(id);
+
+            <span style="color:Green;">//db.Cliente.Remove(cliente);</span>
+            repCli.Excluir(c =&gt; c == cliente);
+
+            <span style="color:Green;">//db.SaveChanges();</span>
+            repCli.SalvarTodos();
+            <span style="color:Blue;">return</span> RedirectToAction(<span style="color:#A31515;">"Index"</span>);
+        }
+
+        <span style="color:Blue;">protected</span> <span style="color:Blue;">override</span> <span style="color:Blue;">void</span> Dispose(<span style="color:Blue;">bool</span> disposing)
+        {
+            <span style="color:Green;">//if (disposing)</span>
+            <span style="color:Green;">//{</span>
+            <span style="color:Green;">//    db.Dispose();</span>
+            <span style="color:Green;">//}</span>
+            repCli.Dispose();
+            <span style="color:Blue;">base</span>.Dispose(disposing);
+        }
+    }
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Pressione F6 para compilar o projeto, e caso tenha algum erro, corrija-o.</p><h2 class="subheading">Views (UI interface de usuário)</h2><p>Uma vez criado o Controller são criadas todas as Views do Cliente automaticamente, como você pode ver na pasta Views/Clientes na figura 16.</p><p><img id="588954E0AB272A26EF3E5868378DD1A6" alt="Dn630213.588954E0AB272A26EF3E5868378DD1A6(pt-br,MSDN.10).png" src="./repositorio_files/IC715951.png" title="Dn630213.588954E0AB272A26EF3E5868378DD1A6(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 16 – Views do Cliente</p><p>Por se tratar de um projeto MVC 5, vamos fazer um ajuste para aparecer a opção Cliente no menu da View principal. Localize o arquivo _Layout.cshtml na pasta Views/Shared. Na lista de opções do menu adicione a chamada para Clientes.</p>
+        
+<div id="code-snippet-24" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C#</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copiar para a área de transferência." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8b50f4c1-f3d8-4e6f-b63f-f086f82e22c3');">Copiar</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8b50f4c1-f3d8-4e6f-b63f-f086f82e22c3" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;div <span style="color:Blue;">class</span>=<span style="color:#A31515;">"navbar-collapse collapse"</span>&gt;
+    &lt;ul <span style="color:Blue;">class</span>=<span style="color:#A31515;">"nav navbar-nav"</span>&gt;
+        &lt;li&gt;@Html.ActionLink(<span style="color:#A31515;">"Home"</span>, <span style="color:#A31515;">"Index"</span>, <span style="color:#A31515;">"Home"</span>)&lt;/li&gt;
+        &lt;li&gt;@Html.ActionLink(<span style="color:#A31515;">"Clientes"</span>, <span style="color:#A31515;">"Index"</span>, <span style="color:#A31515;">"Clientes"</span>)&lt;/li&gt;
+        &lt;li&gt;@Html.ActionLink(<span style="color:#A31515;">"About"</span>, <span style="color:#A31515;">"About"</span>, <span style="color:#A31515;">"Home"</span>)&lt;/li&gt;
+        &lt;li&gt;@Html.ActionLink(<span style="color:#A31515;">"Contact"</span>, <span style="color:#A31515;">"Contact"</span>, <span style="color:#A31515;">"Home"</span>)&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+      <p>Pronto, o projeto já está finalizado utilizando todos os recursos de repositório de dados, em camadas e independentes para você testar cada camada individualmente. Para manutenção de qualquer código é muito mais fácil, produtivo e o melhor de tudo é que para um cenário de times médios e grandes, isto se aplica perfeitamente. Pressione F5 para salvar, compilar e executar a aplicação MVC 5. Conforme a figura 17, clique no menu Clientes para visualizar todos os clientes cadastrados.</p><p><img id="35FD87EFBD130D48D7E94397913BCC4F" alt="Dn630213.35FD87EFBD130D48D7E94397913BCC4F(pt-br,MSDN.10).png" src="./repositorio_files/IC715952.png" title="Dn630213.35FD87EFBD130D48D7E94397913BCC4F(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 17 – Clientes cadastrados</p><p>Caso queira cadastrar um novo cliente, clique em Create New, ou então, em qualquer outra opção disponível para alterar, detalhes ou excluir. Veja a tela de cadastro na figura 18.</p><p><img id="9FF5128E4C59C0825C3DC26C3FA6F4E9" alt="Dn630213.9FF5128E4C59C0825C3DC26C3FA6F4E9(pt-br,MSDN.10).png" src="./repositorio_files/IC715953.png" title="Dn630213.9FF5128E4C59C0825C3DC26C3FA6F4E9(pt-br,MSDN.10).png" xmlns=""></p><p>Figura 18 – Novo cliente</p><p>Eu sugiro você utilizar o breakpoint no Controller para identificar todo o caminho das camadas percorridas pelo código, afinal o Debug é fantástico pra isto.</p><p>Neste artigo criei apenas um projeto de Console e MVC 5, mas fique à vontade para criar qualquer outro tipo de projeto. E, caso necessite aplicar o repositório como serviço que retorne um JSON ou XML, crie um projeto de Web Api que referencia o repositório e pronto.</p><h2 class="subheading">Conclusão</h2><p>O uso de repositórios de dados tem sido usado em projetos de várias tecnologias, e em .NET demonstrei uma maneira que compartilho com todos os leitores, alguns códigos para que você possa implementar nos vossos projetos. Sei que é preciso estudar um pouco mais sobre códigos dinâmicos, actions, predicates, expressões lambda e o entity framework 6, mas isto é o que nos move para os desafios de criar projetos produtivos. Particularmente, sempre irei incentivar o estudo de novidades porque tenho certeza que há sempre o que se aprender e melhorar. Caso você tenha algum comentário ou queira compartilhar códigos com os desenvolvedores, faça isto com prazer e saiba que quanto mais você compartilhar, mais você receberá em troca, afinal é um processo natural de evolução.</p><p>Agradeço a oportunidade de poder compartilhar o conhecimento com todos. Qualquer dúvida e preparação de times de desenvolvimento, por favor me contate.</p><h2 class="subheading">Sobre o Autor</h2><p>Renato Haddad (<a href="mailto:rehaddad@msn.com">rehaddad@msn.com</a>  – <a href="http://www.renatohaddad.com/">www.renatohaddad.com</a> ) é MVP, MCT, MCPD e MCTS, palestrante em eventos da Microsoft em diversos países, ministra treinamentos focados em produtividade com o VS.NET 2012/2013, ASP.NET 4/5, ASP.NET MVC, Entity Framework, Reporting Services, Windows Phone e Windows 8. Visite o blog <a href="http://weblogs.asp.net/renatohaddad">http://weblogs.asp.net/renatohaddad</a>.</p></div>
+      <div id="topicLinks" class="navigationLinks"></div>
+      <div id="homeCommunityLinks" class="navigationLinks">
+        <span> | </span>
+        <a href="https://msdn.microsoft.com/pt-br/">Home</a>
+        <a href="https://msdn.microsoft.com/pt-br/library/cc514048.aspx">| Artigos Técnicos</a>
+        <span> | </span>
+        <a href="https://msdn.microsoft.com/pt-br/aa497440.aspx">Comunidade</a>
+      </div>
+      
+    </div>
+</div>
+
+
+    
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Mostrar:</span>
+        <label>
+            <input type="checkbox" class="libraryFilterInherited" checked="checked" value="Inherit">Herdado
+        </label>
+        <label>
+            <input type="checkbox" class="libraryFilterProtected" checked="checked" value="Protected">Protegido
+        </label>
+    </div>
+</div>
+    
+<input type="hidden" id="libraryMemberFilterEmptyWarning" value="Não há membros disponíveis com suas configurações de filtro atuais.">
+
+
+ 
+</div>
+
+
+            </div>
+            <div class="clear"></div>
+
+            
+    
+<input name="__RequestVerificationToken" type="hidden" value="gKx06TBdn3uEQ63Kb3g-9Tsl-DAbTA3aPHiXdnd28siwuJAAqmi5Xihlo0_aYheAyKy7j3W193ruFBAtcMstItG-2gk1">
+<input id="ratingSubmitUrl" type="hidden" value="https://msdn.microsoft.com/pt-br/library/feedback/add/dn630213.aspx">
+<input id="isTopicRated" type="hidden" value="false">
+
+
+    
+
+    
+    <link type="text/css" rel="stylesheet">
+    
+    <div id="ux-footer" class="" style="" dir="ltr">
+            
+            <div id="footerSock" class="librarySock">
+                <div id="footerSockInner">
+                        <a name="feedback"></a>
+
+<div class="rating">
+    <div id="ratingSection1" style="display: none;">
+        <div class="title">
+            Esta página foi útil?
+        </div>
+        <div class="description">
+            Seus comentários sobre este conteúdo são importantes.<br>Queremos saber sua opinião.
+        </div>
+        <div class="buttons">
+            <button class="button" id="ratingYes">Sim</button>
+            <button class="button" id="ratingNo">Não</button>
+        </div>
+        <input id="ratingValue" type="hidden" value="1">
+    </div>
+    <div id="ratingSection2" style="display: none;">
+        <div class="title">
+            Comentários adicionais?
+        </div>
+        <textarea id="ratingText" rows="6" cols="" maxlength="1500"></textarea>
+        <div class="counter right">
+            <span id="feedbackTextCounter">1249</span> caracteres restantes
+        </div>
+        <div class="buttons left">
+            <button class="button" id="ratingSubmit" disabled="disabled">Enviar</button>
+            <button class="button" id="ratingSkipThis" disabled="disabled">Ignorar</button>
+        </div>
+    </div>
+    <div id="ratingSection3" style="display: block;">
+        <div class="title">
+            Obrigado!
+        </div>
+        <div class="description">
+            Agradecemos seus comentários.
+        </div>
+    </div>
+    
+    
+    <div id="contentFeedbackQAContainer" style="display: none;"></div>
+</div>
+    
+                                        <div class="clear"></div>
+                </div>
+            </div>
+
+        <footer class="top">
+            <div data-fragmentname="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">Centros do desenvolvedor</div>
+    <ul class="links">
+      <li>
+        <a href="https://dev.windows.com/" id="LeftLinks_2148_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+      </li>
+      <li>
+        <a href="http://dev.office.com/" id="LeftLinks_2148_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/vstudio" id="LeftLinks_2148_4" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+      </li>
+      <li>
+        <a href="http://azure.microsoft.com/pt-br/documentation/" target="_blank" id="LeftLinks_2148_12" xmlns="http://www.w3.org/1999/xhtml">Microsoft Azure</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/aa937802" id="LeftLinks_2148_5" xmlns="http://www.w3.org/1999/xhtml">Mais...</a>
+      </li>
+    </ul>
+  </div>
+</div>    
+            <div id="rightLinks">
+                <div data-fragmentname="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">Recursos de aprendizagem</div>
+    <ul class="links">
+      <li>
+        <a href="http://www.microsoftvirtualacademy.com/" id="CenterLinks1_2151_4" xmlns="http://www.w3.org/1999/xhtml">Microsoft Virtual Academy</a>
+      </li>
+      <li>
+        <a href="http://channel9.msdn.com/" id="CenterLinks1_2151_5" xmlns="http://www.w3.org/1999/xhtml">Channel 9</a>
+      </li>
+      <li>
+        <a href="http://www.interoperabilitybridges.com/" id="CenterLinks1_2151_6" xmlns="http://www.w3.org/1999/xhtml">Pontes de interoperabilidade</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/magazine/" id="CenterLinks1_2151_7" xmlns="http://www.w3.org/1999/xhtml">MSDN Magazine</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">comunidade</div>
+    <ul class="links">
+      <li>
+        <a href="https://social.msdn.microsoft.com/forums/pt-br/home" id="CenterLinks2_2151_8" xmlns="http://www.w3.org/1999/xhtml">Fóruns</a>
+      </li>
+      <li>
+        <a href="http://blogs.msdn.com/b/developer-tools/" id="CenterLinks2_2151_9" xmlns="http://www.w3.org/1999/xhtml">Blogs</a>
+      </li>
+      <li>
+        <a href="http://www.codeplex.com/" id="CenterLinks2_2151_10" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <div class="linkListTitle">Suporte</div>
+    <ul class="links">
+      <li>
+        <a href="https://msdn.microsoft.com/hh361695" id="CenterLinks3_2151_11" xmlns="http://www.w3.org/1999/xhtml">Suporte autônomo</a>
+      </li>
+    </ul>
+  </div>
+</div>
+                <div data-fragmentname="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml" class="nth-child-4n">
+  
+  <div class="linkList">
+    <div class="linkListTitle">Programas</div>
+    <ul class="links">
+      <li>
+        <a href="https://www.microsoft.com/bizspark/" id="CenterLinks4_2151_13" xmlns="http://www.w3.org/1999/xhtml">BizSpark (para iniciantes)</a>
+      </li>
+      <li>
+        <a href="https://www.dreamspark.com/" id="CenterLinks4_2151_14" xmlns="http://www.w3.org/1999/xhtml">DreamSpark</a>
+      </li>
+      <li>
+        <a href="http://www.imaginecup.com/" id="CenterLinks4_2151_17" xmlns="http://www.w3.org/1999/xhtml">Imagine Cup</a>
+      </li>
+    </ul>
+  </div>
+</div>                
+            </div>
+        </footer>
+    
+        <footer class="bottom">
+            <span class="localeContainer">
+                
+    <form class="selectLocale" id="selectLocaleForm" action="https://msdn.microsoft.com/pt-br/selectlocale-dmc">
+        <input type="hidden" name="fromPage" value="https%3a%2f%2fmsdn.microsoft.com%2fpt-br%2flibrary%2fdn630213.aspx">
+        <a href="https://msdn.microsoft.com/pt-br/library/dn630213.aspx#" onclick="$(&#39;#selectLocaleForm&#39;).submit();return false;" title="Altere seu idioma">Brasil (Português)</a>
+    </form>
+
+
+            </span>
+        
+            <div data-fragmentname="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://msdn.microsoft.com/newsletter.aspx" id="BottomLinks_2148_7" xmlns="http://www.w3.org/1999/xhtml">Boletim informativo</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/dn529288" id="BottomLinks_2148_8" xmlns="http://www.w3.org/1999/xhtml">Privacidade &amp; cookies</a>
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/cc300389" id="BottomLinks_2148_9" xmlns="http://www.w3.org/1999/xhtml">Termos de uso</a>
+      </li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" id="BottomLinks_2148_10" xmlns="http://www.w3.org/1999/xhtml">Marcas comerciais</a>
+      </li>
+    </ul>
+  </div>
+</div>    
+            <span class="logoLegal">
+                <span class="logo"></span>
+                <span class="copyright">© 2015 Microsoft</span>
+            </span>
+        </footer>
+    </div>
+    
+
+
+            <div class="footerPrintView">
+                <div class="footerCopyrightPrintView">© 2015 Microsoft</div>
+            </div>
+
+            
+            
+    
+    
+    <input id="tocPaddingPerLevel" type="hidden" value="17">
+
+
+
+            <input id="MtpsDevice" type="hidden" value="Default">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+
+            
+            
+            
+            
+            
+
+
+
+
+
+
+<noscript>&lt;div&gt;&lt;img alt="DCSIMG" id="Img1" width="1" height="1" src="https://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;&lt;/div&gt;</noscript>
+
+
+
+
+
+
+
+
+
+<noscript>
+  &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+    &lt;img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;
+  &lt;/a&gt;
+</noscript>
+            
+
+
+
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="r7lgNoDPkvbb38tC8cJBn2PefWvCAqnDBD5gYf0YsJaEyPqsHnNoAwoRfZF5sLBmroJtS5XEow7okX9E8wTOmneg4GQ1">
+</div>
+
+
+        </div>
+
+        
+        
+        
+        
+    <script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"js\": \"https://i2-msdn.sec.s-msft.com\", \r\n\t\"css\": \"https://i-msdn.sec.s-msft.com\", \r\n\t\"xap\": \"https://msdn.microsoft.com\"\r\n});\r\n/**/" },
+	{ url: "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js" },
+	{ txt: "//\n  var literalNormalizedUrl = \u0027/pt-br/library/dn630213(l=pt-br,v=msdn.10).aspx\u0027;\n  var wt_nvr_ru = \u0027WT_NVR_RU\u0027;\n  var wt_fpcdom = \u0027.microsoft.com\u0027;\n  var wt_domlist = \u0027msdn.microsoft.com\u0027;\n  var wt_pathlist = \u0027\u0027;\n  var wt_paramlist = \u0027DCSext.mtps_devcenter\u0027;\n  var wt_siteid = \u0027MSDN\u0027;\n  var gDomain = \u0027m.webtrends.com\u0027;\n  var gDcsId = \u0027dcsmgru7m99k7mqmgrhudo0k8_8c6m\u0027;\n  var gFpc = \u0027WT_FPC\u0027;\n\n\n\n  if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n    var wtidJs = document.createElement(\"script\");\n    wtidJs.src = \"//\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n    document.getElementsByTagName(\"head\")[0].appendChild(wtidJs);\n  }\n\n\n\n  var detectedLocale = \u0027pt-br\u0027;\n  var wtsp = \u0027msdnlib_techart\u0027;\n  var gTrackEvents = \u00270\u0027;\n/**/" },
+	{ txt: "/**/\n  var omni_guid = \"2b3e9135-9d41-47c3-bfba-80764f81233e\";\n/**/" },
+	{ txt: "//\n\n            window.appInsightsId = \u002760854590-027a-4ae4-98be-2741a40f355f\u0027;\n            //" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:Utilities,1:Layout,2:Header,1:Rating,2:Footer,0:Topic,3:webtrendsscript,4:omni_rsid_MSDN,5:WEDCS,0:AppInsightsPerf,6:Toc,1:SearchBox;/Areas/Epx/Content/Scripts:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Centers/Themes/StandardDevCenter/Content:2,/Areas/Global/Content/Webtrends/resources:3,/Areas/Global/Content/Omniture/resources/MSDN:4,/Areas/Library/Themes/Base/Content:5,/Areas/Library/Content:6\u0026amp;hashKey=C75103DA1771CBC9E3A0EE78FD33B307\u0026amp;v=52588A005BB929099B8F3699461055D3" },
+	{ url: "https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=Msdn\u0026loc=pt-br\u0026focusOnInit=false\u0026emptyWatermark=true\u0026searchButtonTooltip=Pesquisar no MSDN" },
+	{ url: "https://i2-msdn.sec.s-msft.com/Combined.js?resources=0:PrintExportButton,1:NavigationResize,1:LibraryMemberFilter,2:Toc_Fixed,2:CodeSnippet,2:TopicNotInScope,2:CollapsibleArea,2:VersionSelector,2:SurveyBroker;/Areas/Library/Themes/Base/Content:0,/Areas/Library/Content:1,/Areas/Epx/Content/Scripts:2\u0026amp;hashKey=3248804C2DE1E642F8B20C4F83DBEA3B\u0026amp;v=52588A005BB929099B8F3699461055D3" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; top: 14062px; left: 447px; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span><script src="./repositorio_files/broker-config.js"></script><div id="overlayMask"></div></body></html>

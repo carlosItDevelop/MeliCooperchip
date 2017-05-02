@@ -1,0 +1,9 @@
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\bin\Release\Infra.Services.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\bin\Release\Infra.Services.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\bin\Release\Infra.Entidades.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\bin\Release\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\bin\Release\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\bin\Release\Infra.Entidades.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\obj\Release\Infra.Services.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\obj\Release\Infra.Services.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools-MVC5\Infra.Services\obj\Release\Infra.Services.pdb

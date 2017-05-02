@@ -1,0 +1,19 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\bin\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\bin\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\bin\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\bin\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\obj\Debug\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\obj\Debug\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\APIMLTools\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\bin\Debug\Model.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\bin\Debug\Model.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\obj\Debug\Model.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\Model\obj\Debug\Model.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\bin\Debug\Model.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\bin\Debug\Model.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\obj\Debug\Model.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\Model\obj\Debug\Model.pdb

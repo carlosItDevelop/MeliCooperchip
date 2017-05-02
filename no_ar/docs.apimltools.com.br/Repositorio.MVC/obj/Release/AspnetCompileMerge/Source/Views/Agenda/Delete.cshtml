@@ -1,0 +1,73 @@
+﻿@model Repositorio.Entidades.Agenda
+
+@{
+    ViewBag.Title = "APIML | Tools";
+}
+
+<h2>APIML | Tools - Agenda</h2>
+
+
+<h3>Deseja mesmo excluir estes dados?</h3>
+<div>
+    <h4>Agenda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Evento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Agente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayTextFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prioridade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prioridade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index", new{ Class="btm btn-danger" })
+        </div>
+    }
+</div>

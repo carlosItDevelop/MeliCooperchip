@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Repositorio.Entidades.ProgramaDeEstudo>
+
+@{
+    ViewBag.Title = "APIML | Tools";
+}
+
+<h2>APIML | Tools - TaskList</h2>
+
+<p>
+    @Html.ActionLink("Novo Programa de Estudo", "Create", "Index", new { @class="btn btn-info btn-sm"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Iniciado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Entendido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Praticado)
+        </th>
+        <th class="text-center" colspan="3">Ação</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Iniciado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entendido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Praticado)
+        </td>
+        <td class="text-center" colspan="3">
+
+            @*@Html.ActionLink("Edit", "Edit", "tag", new { category.Id }, new { @class = "btn btn-success" })*@
+
+            @Html.ActionLink("Editar", "Edit", new { id = item.ProgramaDeEstudoID }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Detalhes", "Details", new { id = item.ProgramaDeEstudoID }, new { @class = "btn btn-default btn-sm" })
+            @Html.ActionLink("Excluir", "Delete", new { id = item.ProgramaDeEstudoID }, new { @class = "btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,98 @@
+﻿@model Repositorio.Entidades.Cliente
+
+@{
+    ViewBag.Title = "APIML | Tools";
+}
+
+<h2>APIML | Tools - Cliente Detalhes</h2>
+
+<div>
+    @*<h4>Cliente</h4>*@
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CpfCnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CpfCnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DDD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DDD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoServico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoServico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TecnologiaRequerida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TecnologiaRequerida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ClienteID }) |
+    @Html.ActionLink("Voltar", "Index", new {@class="btn btn-default btn-sm"})
+</p>

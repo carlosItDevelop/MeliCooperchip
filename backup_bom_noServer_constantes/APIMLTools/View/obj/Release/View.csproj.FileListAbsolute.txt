@@ -1,0 +1,40 @@
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\View.dll.config
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\View.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\View.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\Model.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\Newtonsoft.Json.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\RestSharp.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\SDK.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\Model.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\View\bin\SDK.pdb
+D:\Desenv\MeLi\APIMLDesenv\tools\View\obj\Release\View.csprojResolveAssemblyReference.cache
+D:\Desenv\MeLi\APIMLDesenv\tools\View\obj\Release\View.dll
+D:\Desenv\MeLi\APIMLDesenv\tools\View\obj\Release\View.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\View.dll.config
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\View.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\View.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\Model.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\Newtonsoft.Json.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\RestSharp.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\SDK.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\Model.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\bin\SDK.pdb
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\obj\Release\View.csprojResolveAssemblyReference.cache
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\obj\Release\View.resources.rscConfigApp.resources
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\obj\Release\View.csproj.GenerateResource.Cache
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\obj\Release\View.dll
+C:\carlos\Producao\Meli\APIMLProducao\v-beta\APIMLTools\View\obj\Release\View.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\View.dll.config
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\View.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\View.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\Model.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\Newtonsoft.Json.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\RestSharp.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\SDK.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\Model.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\View\bin\SDK.pdb
+C:\Users\caixa aqui\Desktop\APIMLTools\View\obj\Release\View.csprojResolveAssemblyReference.cache
+C:\Users\caixa aqui\Desktop\APIMLTools\View\obj\Release\View.resources.rscConfigApp.resources
+C:\Users\caixa aqui\Desktop\APIMLTools\View\obj\Release\View.csproj.GenerateResource.Cache
+C:\Users\caixa aqui\Desktop\APIMLTools\View\obj\Release\View.dll
+C:\Users\caixa aqui\Desktop\APIMLTools\View\obj\Release\View.pdb
